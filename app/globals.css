@@ -6,6 +6,7 @@
   --light: hsl(0, 0%, 90%);
   --violet: hsl(270, 45%, 50%);
   --violet-dark: hsl(271, 100%, 25%);
+  --memory: url('/images/memory.png')
 }
 body {
   box-sizing: border-box;

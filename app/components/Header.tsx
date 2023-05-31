@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <nav
       id="navbar"
-      className="fixed shadow-sm shadow-dark-color dark:shadow-light-color bg-light-color dark:bg-dark-color flex justify-evenly min-w-full items-center p-6 max-h-fit text-xl"
+      className="fixed shadow-sm shadow-dark-color dark:shadow-light-color bg-light-color dark:bg-dark-color flex justify-evenly min-w-full items-center p-6 max-h-fit text-xl z-50"
     >
       <ul className="flex items-center">
         <li className="p-1">

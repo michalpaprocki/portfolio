@@ -8,13 +8,11 @@ export default function Home() {
       <main className="min-h-[calc(100dvh-10rem)] bg-light-color text-dark-color dark:bg-dark-color dark:text-light-color items-center flex flex-col">
         <Header />
         <Hero />
-        <section className="p-8 mt-16 grid gap-4 grid-cols-2 items-center w-[80%]">
-          <GridItem title="project 1" />
-          <GridItem title="project 2" />
-          <GridItem title="project 3" />
-          <GridItem title="project 4" />
-          <GridItem title="project 5" />
-          <GridItem title="project 6" />
+        <section className="p-8 mt-16 grid gap-4 md:grid-cols-2 grid-cols-1 items-center md:w-[80%] w-[90%]">
+          <GridItem title="Memory Game" image="memory.png" />
+          <GridItem title="Minesweeper Game" image="minesweeper.png" />
+          <GridItem title="Blogging Site" image="blogga.png"/>
+    
         </section>
       </main>
       <Footer />
