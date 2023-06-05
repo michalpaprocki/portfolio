@@ -4,9 +4,11 @@ interface Props {
   title: string;
   description?: string;
   image: string;
+  linkApp?: string;
+  linkCode?: string;
 }
 
-const GridItem = ({ description, title, image }: Props) => {
+const GridItem = ({ description, title, image, linkApp, linkCode }: Props) => {
 
   
   return (
@@ -26,8 +28,8 @@ const GridItem = ({ description, title, image }: Props) => {
             <span> techno here</span>
           </div>
           <div className="flex justify-evenly p-4 absolute left-0 bottom-0 w-full">
-            <Tile text="App" />
-            <Tile text="<Code />" />
+            <Tile text="App" link={linkApp}/>
+            <Tile text="<Code />" link={linkCode}/>
           </div>
         </div>
       </div>

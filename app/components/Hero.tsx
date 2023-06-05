@@ -11,7 +11,7 @@ const Hero = () => {
                 Web Developer
               </h1>
             </div>
-            <div className="border-solid border-l-4 border-dark-color dark:border-light-color p-8 flex">
+            <div className="hidden md:flex border-solid border-l-4 border-dark-color dark:border-light-color p-8">
               <span className="p-2 mx-4 rounded-full block  h-5 w-5 transition-all duration-500 animate-light_toggle1 dark:animate-dark_toggle1 "></span>
               <span className="p-2 mx-4 rounded-full block  h-5 w-5 transition-all duration-500 animate-light_toggle2 dark:animate-dark_toggle2 "></span>
               <span className="p-2 mx-4 rounded-full block  h-5 w-5 transition-all duration-500 animate-light_toggle3 dark:animate-dark_toggle3 "></span>
