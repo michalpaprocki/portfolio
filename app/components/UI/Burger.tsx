@@ -7,13 +7,13 @@ const Burger = () => {
   return (
     <>
       <ul className="md:flex hidden">
-        <li className="p-1 md:h-auto h-[5rem]">
+        <li className="p-1 md:h-auto">
           <Tile text="Projects" />
         </li>
-        <li className="p-1 md:h-auto h-[5rem]">
+        <li className="p-1 md:h-auto">
           <Tile text="About" />
         </li>
-        <li className="p-1 md:h-auto h-[5rem]">
+        <li className="p-1 md:h-auto">
           <Tile text="Contact" />
         </li>
       </ul>
@@ -55,25 +55,25 @@ const Burger = () => {
         }}
         className="md:hidden"
       >
-        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block group-hover:animate-burger_up transition-all 200ms ease-in "></span>
-        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block group-hover:animate-burger_mid transition-all 200ms ease-in"></span>
-        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block group-hover:animate-burger_down transition-all 200ms ease-in"></span>
+        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block"></span>
+        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block "></span>
+        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block "></span>
       </div>
       {isOpen ? (
         <>
-          <div className="md:hidden absolute top-0 min-h-[calc(100lvh-var(--headerH))] bg-gradient-to-br dark:from-violet-a80 dark:to-violet-dark-a80 from-violet-a80 to-violet-dark-a80 translate-y-[var(--headerH)] w-full backdrop-blur-sm">
+          <div className="md:hidden absolute top-0 min-h-[calc(100lvh-var(--headerH))] translate-y-[var(--headerH)] w-full backdrop-blur-sm bg-dark-a80 dark:bg-light-a80">
             <ul className="min-h-[calc(100dvh-var(--headerH))] flex flex-col items-center justify-evenly">
-              <li className="p-1 dark:bg-inherit bg-light-color">
+              <li className=" dark:bg-dark-color bg-light-color">
                 <DayAndNight />
               </li>
-              <li className="p-1 dark:bg-inherit bg-light-color">
-                <Tile text="Projects" />
+              <li className=" dark:bg-dark-color bg-light-color">
+                <Tile text="Projects" hoverBgColor="violet"/>
               </li>
-              <li className="p-1 dark:bg-inherit bg-light-color">
-                <Tile text="About" />
+              <li className=" dark:bg-dark-color bg-light-color">
+                <Tile text="About" hoverBgColor="violet"/>
               </li>
-              <li className="p-1 dark:bg-inherit bg-light-color">
-                <Tile text="Contact" />
+              <li className=" dark:bg-dark-color bg-light-color">
+                <Tile text="Contact" hoverBgColor="violet"/>
               </li>
             </ul>
           </div>

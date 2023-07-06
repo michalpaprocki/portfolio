@@ -14,10 +14,11 @@ module.exports = {
         "gradient-stripes":
           "linear-gradient(90deg , hsl(231, 53%, 75%, .5) 50%, hsl(226, 39%, 10%) 50%)",
       },
-
       colors: {
         "dark-color": "var(--dark)",
+        "dark-a80": "var(--dark-a80)",
         "light-color": "var(--light)",
+        "light-a80": "var(--light-a80)",
         "violet": "var(--violet)",
         "violet-dark": "var(--violet-dark)",
         "violet-a40": "var(--violet-a40)",
