@@ -4,6 +4,7 @@
 :root {
   --dark: hsl(0, 0%, 10%);
   --dark-a80: hsla(0, 0%, 10%, 0.8);
+  --dark-a40: hsla(0, 0%, 10%, 0.4);
   --light: hsl(0, 0%, 90%);
   --light-a80: hsla(0, 0%, 90%, 0.8);
   --violet: hsl(270, 45%, 50%);

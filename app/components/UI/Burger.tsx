@@ -61,19 +61,19 @@ const Burger = () => {
       </div>
       {isOpen ? (
         <>
-          <div className="md:hidden absolute top-0 min-h-[calc(100lvh-var(--headerH))] translate-y-[var(--headerH)] w-full backdrop-blur-sm bg-dark-a80 dark:bg-light-a80">
+          <div className="md:hidden absolute top-0 min-h-[calc(100lvh-var(--headerH))] translate-y-[var(--headerH)] w-full backdrop-blur-sm bg-dark-a80 dark:bg-violet-a80">
             <ul className="min-h-[calc(100dvh-var(--headerH))] flex flex-col items-center justify-evenly">
               <li className=" dark:bg-dark-color bg-light-color">
                 <DayAndNight />
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="Projects" hoverBgColor="violet"/>
+                <Tile text="Projects" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="About" hoverBgColor="violet"/>
+                <Tile text="About" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="Contact" hoverBgColor="violet"/>
+                <Tile text="Contact" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
               </li>
             </ul>
           </div>
