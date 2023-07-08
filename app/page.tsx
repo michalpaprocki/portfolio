@@ -1,8 +1,9 @@
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import GridItem from "./components/UI/GridItem";
-
+import Blobs from "./components/UI/Blobs";
 import {
   SiVercel,
   SiRender,
@@ -19,20 +20,20 @@ import {
   SiReact,
 } from "react-icons/si";
 
-
 export default function Home() {
   return (
     <>
       <Header />
       <main
+        id="up"
         className={`bg-light-color text-dark-color dark:bg-dark-color dark:text-light-color pb-12 flex flex-col`}
       >
-        
-        <section className=" relative ">
-
+        <section className=" relative overflow-hidden">
+         <Blobs />
+          
           <Hero />
         </section>
-        <section className="flex justify-center">
+        <section id="projects" className="flex justify-center">
           <div className="md:p-16 p-8 mt-16 grid md:gap-8 gap-4 xl:grid-cols-2 grid-cols-1 items-center md:w-[80%] w-full">
             <GridItem
               description="Simple Pokemon themed memory game made with React, TypeScript and TailwindCSS. "

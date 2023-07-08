@@ -1,5 +1,5 @@
 
-import Link from "next/link";
+
 import Logo from "./UI/Logo";
 import Burger from "./UI/Burger";
 
@@ -11,9 +11,9 @@ const Header = () => {
     >
       <ul className="flex items-center">
         <li className="p-1">
-          <Link href={"#"}>
+          <a href="#up">
             <Logo text="MP" />
-          </Link>
+          </a>
         </li>
       </ul>
      <Burger />

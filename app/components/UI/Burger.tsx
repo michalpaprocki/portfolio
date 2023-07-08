@@ -2,13 +2,14 @@
 import Tile from "./Tile";
 import DayAndNight from "../DayAndNight";
 import { useState } from "react";
+import Logo from "./Logo";
 const Burger = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
       <ul className="md:flex hidden">
         <li className="p-1 md:h-auto">
-          <Tile text="Projects" />
+          <Tile text="Projects" link="#projects"/>
         </li>
         <li className="p-1 md:h-auto">
           <Tile text="About" />
@@ -66,8 +67,9 @@ const Burger = () => {
               <li className=" dark:bg-dark-color bg-light-color">
                 <DayAndNight />
               </li>
+              <li><a href="#up"><Tile text="MP" /></a></li>
               <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="Projects" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
+                <Tile text="Projects" link="#projects" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile text="About" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>

@@ -49,7 +49,79 @@ module.exports = {
         "link-violet": "0rem 0rem 1rem var(--violet)",
         "link-violet-dark": "0rem 0rem 1rem var(--violet-dark)",
       },
+      dropShadow: {
+        "blob1-light": "-2.2rem 4rem 1rem var(--dark)",
+        "blob2-light": "2.2rem 4rem 1rem var(--dark)",
+        "blob1-dark": "-2.2rem 4rem 1rem var(--violet-dark)",
+        "blob2-dark": "2.2rem 4rem 1rem var(--violet-dark)",
+      },
       keyframes: {
+        bloberize1: {
+          "11%, 89%": {
+            borderRadius: "42% 58% 48% 52% / 18% 66% 34% 82%",
+          },
+          "30%, 72%": {
+            borderRadius: "54% 46% 55% 45% / 52% 51% 49% 28%",
+          },
+
+          "50%": {
+            borderRadius: "55% 45% 35% 65% / 33% 50% 50% 67%",
+          },
+          "0%": {
+            transform: "translate(-15rem, -20rem)",
+          },
+
+          "25%": {
+            transform: "translate(5rem, -5rem)",
+          },
+          "50%": {
+            transform: "scale(1.2)",
+          },
+          "75%": {
+            transform: "translate(5rem, -5rem)",
+          },
+          "100%": {
+            transform: "translate(5rem, -20rem)",
+          },
+        },
+        bloberize2: {
+          "11%, 89%": {
+            borderRadius: "57% 43% 35% 65% / 51% 41% 59% 49%",
+          },
+          "30%, 72%": {
+            borderRadius: "61% 39% 71% 29% / 46% 60% 40% 54%",
+          },
+
+          "50%": {
+            borderRadius: "61% 39% 47% 53% / 46% 60% 40% 54% ",
+          },
+          "50%": {
+            transform: "scale(1.1)",
+          },
+        },
+        bloberize3: {
+          "0%, 100%": {
+            transform: "rotate(0deg)"
+          },
+          "22%, 78%": {
+            borderRadius: "46% 54% 63% 37% / 46% 68% 32% 54%",
+            transform: "rotate(15deg)",
+            transform: "scale(0.9)",
+          },
+          "33%, 62%": {
+            borderRadius: "63% 37% 73% 27% / 44% 49% 31% 56%",
+            transform: "rotate(22deg)"
+          },
+
+          "51%": {
+            borderRadius: "33% 67% 37% 63% / 65% 46% 54% 35%",
+            transform: "rotate(31deg)"
+          },
+          "40%": {
+            transform: "scale(1.2) rotate(44deg)",
+            
+          },
+        },
         moveBGV: {
           "0%": {
             backgroundPosition: "0 0, 1.5rem -0.5rem",
@@ -63,7 +135,15 @@ module.exports = {
             transform: "translateY(-20rem )",
           },
           "100%": {
-            transform: "translateY(0rem )",
+            transform: "translateY(10rem )",
+          },
+        },
+        slideIn2: {
+          "0%": {
+            transform: "translateX(30rem )",
+          },
+          "100%": {
+            transform: "translateX(7rem )",
           },
         },
         fadeOut: {
@@ -74,7 +154,7 @@ module.exports = {
             opacity: 0,
           },
         },
-       
+
         fadeIn: {
           "0%": {
             opacity: 0,
@@ -198,6 +278,14 @@ module.exports = {
               "0px 0px 4px var(--violet), 0px 0px 10px var(--violet), 0px 0px 18px var(--violet), 0px 0px 38px var(--violet), 0px 0px 76px var(--violet), 0px 0px 80px var(--violet), 0px 0px 90px var(--violet), 0px 0px 100px var(--violet)  ",
           },
         },
+        bump:{
+          "0%, 100%":{
+            transform: "translateY(0rem)"
+          },
+          "50%":{
+            transform: "translateY(-1rem)"
+          }
+        },
         heartPulse: {
           "0%, 15%, 30%, 100%": {
             transform: "scale(1)",
@@ -229,8 +317,13 @@ module.exports = {
         heartPulse: "heartPulse ease-out 1.2s infinite",
         moveBGVertical: "moveBGV linear 3s infinite",
         slideIn: "slideIn ease-out 1s 2s forwards ",
-        fadeIn: "fadeIn ease-in 1s 3s forwards",
-
+        fadeIn3s: "fadeIn ease-in 1s 3s forwards",
+        fadeIn4s: "fadeIn ease-in 1s 4s forwards",
+        fadeIn5s: "fadeIn ease-in 1s 5s forwards",
+        blobAround1: "fadeIn ease-in 1s 4s forwards, bloberize1 ease-in-out 90s infinite",
+        blobAround2: "slideIn2 ease-out 3s 2s forwards,  bloberize2 ease-in-out 30s infinite",
+        blobAround3: "fadeIn ease-in 1s 5s forwards, bloberize3 ease-in-out 35s infinite",
+        bump: "bump cubic-bezier(.94,.03,.11,1.01) 1s forwards"
       },
     },
   },

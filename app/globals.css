@@ -16,6 +16,9 @@
   --memory: url('/images/memory.png');
   --headerH: 5rem;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-width: 400px;
   box-sizing: border-box;
@@ -26,4 +29,29 @@ body {
   font-family: var(--abel-font), "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: 400;
+}
+nav {
+  min-width: 400px;
+}
+.blob {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 55% 45% 35% 65% / 33% 50% 50% 67%;
+}
+.blob2 {
+  height: 27rem;
+  width: 26rem;
+  border-radius: 50% 40% 30% 60% / 50% 40% 50% 40%;
+  right: 0;
+  transform: translateX(30rem);
+  bottom: 8rem;
+}
+.blob3 {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 37% 63% 84% 16% / 53% 39% 61% 47%;
+  bottom: 8rem;
+}
+h2#hero-heading:nth-child(10) {
+  color:aqua !important;
 }
