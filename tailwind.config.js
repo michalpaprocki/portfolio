@@ -11,8 +11,10 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops) 25%)",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-stripes":
-          "linear-gradient(90deg , hsl(231, 53%, 75%, .5) 50%, hsl(226, 39%, 10%) 50%)",
+        "gradient-grid":
+          "linear-gradient(90deg , var(--violet) 1%, transparent 5%), linear-gradient(270deg, var(--violet) 1%, transparent 5%), linear-gradient(180deg , var(--violet) 1%, transparent 5%), linear-gradient(0deg, var(--violet) 1%, transparent 5%)",
+          "gradient-grid-dark":
+          "linear-gradient(90deg , var(--violet) 1%, transparent 5%), linear-gradient(270deg, var(--violet) 1%, transparent 5%), linear-gradient(180deg , var(--violet) 1%, transparent 5%), linear-gradient(0deg, var(--violet) 1%, transparent 5%)", 
         "gradient-tri-violet":
           "conic-gradient(from 330deg at 50% 60%, var(--violet-dark) 60deg, transparent 60deg) ,conic-gradient(from 150deg at 50% 30%, var(--violet) 60deg, transparent 60deg)",
         "gradient-tri-dark":
@@ -34,12 +36,15 @@ module.exports = {
         "dark-a40": "var(--dark-a80)",
         "light-color": "var(--light)",
         "light-a80": "var(--light-a80)",
-        violet: "var(--violet)",
+        "violet": "var(--violet)",
         "violet-dark": "var(--violet-dark)",
         "violet-a40": "var(--violet-a40)",
         "violet-dark-a40": "var(--violet-dark-a40)",
         "violet-a80": "var(--violet-a80)",
         "violet-dark-a80": "var(--violet-dark-a80)",
+        "react-logo": "#61DBFB",
+        "node-logo":  "#679267",
+        "mongo-logo": "#4DB33D"
       },
       boxShadow: {
         "link-light-fat": "0rem 0rem 2rem 2px var(--dark)",
@@ -122,12 +127,18 @@ module.exports = {
             
           },
         },
-        moveBGV: {
-          "0%": {
-            backgroundPosition: "0 0, 1.5rem -0.5rem",
+        gridMove: {
+          "0%, 100%": {
+            backgroundPosition: "100% 0%",
           },
-          "100%": {
-            backgroundPosition: "0 3rem, 1.5rem 2.5rem",
+          "25%": {
+            backgroundPosition: "0% 100%"
+          },
+          "50%": {
+            backgroundPosition: "-100% 0%"
+          },
+          "75%":{
+            backgroundPosition: "0% -100%"
           },
         },
         slideIn: {
@@ -315,7 +326,8 @@ module.exports = {
         normalize_mid_burger: "normalizeMidBurger ease-out 200ms forwards",
         neonPoizone: "neonPoizone ease 0.15ms infinite alternate",
         heartPulse: "heartPulse ease-out 1.2s infinite",
-        moveBGVertical: "moveBGV linear 3s infinite",
+        gridMove: "gridMove linear 150s infinite",
+        gridMoveDark: "gridMove linear 150s infinite",
         slideIn: "slideIn ease-out 1s 2s forwards ",
         fadeIn3s: "fadeIn ease-in 1s 3s forwards",
         fadeIn4s: "fadeIn ease-in 1s 4s forwards",

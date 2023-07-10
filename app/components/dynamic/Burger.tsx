@@ -1,8 +1,8 @@
 "use client";
 import Tile from "./Tile";
-import DayAndNight from "../DayAndNight";
+import DayAndNight from "./DayAndNight";
 import { useState } from "react";
-import Logo from "./Logo";
+import Logo from "../static/Logo";
 const Burger = () => {
   const [isOpen, setOpen] = useState(false);
   return (
@@ -12,10 +12,10 @@ const Burger = () => {
           <Tile text="Projects" link="#projects"/>
         </li>
         <li className="p-1 md:h-auto">
-          <Tile text="About" />
+          <Tile text="About" link="#about" />
         </li>
         <li className="p-1 md:h-auto">
-          <Tile text="Contact" />
+          <Tile text="Contact" link="#contact"/>
         </li>
       </ul>
       <ul className="hidden md:block">
@@ -72,10 +72,10 @@ const Burger = () => {
                 <Tile text="Projects" link="#projects" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="About" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
+                <Tile text="About" link="#about" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="Contact" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
+                <Tile text="Contact" link="#contact" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
               </li>
             </ul>
           </div>

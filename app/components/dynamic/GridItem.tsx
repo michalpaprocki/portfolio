@@ -1,6 +1,6 @@
 import Tile from "./Tile";
 import { IconType } from "react-icons/lib";
-
+import Icon from './../static/Icon'
 interface Props {
   title: string;
   description?: string;
@@ -35,13 +35,7 @@ const GridItem = ({
             <div className="flex transition-all justify-around">
               {icons ? (
                 icons.map((icon, index) => (
-                  <div
-                    key={index}
-                    after-dynamic-value={icon.title}
-                    className={`after:content-[attr(after-dynamic-value)] flex flex-col items-center p-1 after:transition-all after:ease-linear after:200ms after:delay-150 after:-translate-y-5 hover:after:translate-y-0 after:opacity-0 hover:after:opacity-100 after:scale-75 hover:after:scale-95 after:font-bold hover:text-violet transition-all delay-100 150ms sm:hover:scale-110 sm:scale-100 scale-50 w-12 text-center hover:scale-75 dark:text-violet dark:hover:text-light-color`}
-                  >
-                    <icon.icon size={"3em"} />
-                  </div>
+                  <Icon Icon={icon.icon} key={index} title={icon.title}/>
                 ))
               ) : (
                 <></>

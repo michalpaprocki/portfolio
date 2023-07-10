@@ -4,6 +4,9 @@ import Script from "next/script";
 export const metadata = {
   title: "",
   description: "",
+  icons: {
+    icon: './images/favicon.ico' 
+  }
 };
 const abel = Abel({
   subsets: ["latin"],

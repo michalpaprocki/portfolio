@@ -1,7 +1,7 @@
 
 
-import Logo from "./UI/Logo";
-import Burger from "./UI/Burger";
+import Logo from "../static/Logo";
+import Burger from "./Burger";
 
 const Header = () => {
   return (
