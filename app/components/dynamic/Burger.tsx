@@ -9,13 +9,25 @@ const Burger = () => {
     <>
       <ul className="md:flex hidden">
         <li className="p-1 md:h-auto">
-          <Tile text="Projects" link="#projects"/>
+          <Tile
+            text="Projects"
+            link="#projects"
+            darkHoverTextColor="dark:hover:text-dark-color"
+          />
         </li>
         <li className="p-1 md:h-auto">
-          <Tile text="About" link="#about" />
+          <Tile
+            text="About"
+            link="#about"
+            darkHoverTextColor="dark:hover:text-dark-color"
+          />
         </li>
         <li className="p-1 md:h-auto">
-          <Tile text="Contact" link="#contact"/>
+          <Tile
+            text="Contact"
+            link="#contact"
+            darkHoverTextColor="dark:hover:text-dark-color"
+          />
         </li>
       </ul>
       <ul className="hidden md:block">
@@ -67,15 +79,42 @@ const Burger = () => {
               <li className=" dark:bg-dark-color bg-light-color">
                 <DayAndNight />
               </li>
-              <li><a href="#up"><Tile text="MP" /></a></li>
-              <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="Projects" link="#projects" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
+              <li>
+                <a href="#up">
+                  <Tile
+                    text="MP"
+                    hoverBgColor="hover:bg-violet"
+                    hoverShadowColor="hover:shadow-link-violet"
+                    darkHoverTextColor="dark:hover:text-dark-color"
+                  />
+                </a>
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="About" link="#about" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
+                <Tile
+                  text="Projects"
+                  link="#projects"
+                  hoverBgColor="hover:bg-violet"
+                  hoverShadowColor="hover:shadow-link-violet"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                />
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
-                <Tile text="Contact" link="#contact" hoverBgColor="hover:bg-violet" hoverShadowColor="hover:shadow-link-violet"/>
+                <Tile
+                  text="About"
+                  link="#about"
+                  hoverBgColor="hover:bg-violet"
+                  hoverShadowColor="hover:shadow-link-violet"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                />
+              </li>
+              <li className=" dark:bg-dark-color bg-light-color">
+                <Tile
+                  text="Contact"
+                  link="#contact"
+                  hoverBgColor="hover:bg-violet"
+                  hoverShadowColor="hover:shadow-link-violet"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                />
               </li>
             </ul>
           </div>

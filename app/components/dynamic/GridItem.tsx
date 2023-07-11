@@ -1,6 +1,6 @@
 import Tile from "./Tile";
 import { IconType } from "react-icons/lib";
-import Icon from './../static/Icon'
+import Icon from "./../static/Icon";
 interface Props {
   title: string;
   description?: string;
@@ -35,7 +35,7 @@ const GridItem = ({
             <div className="flex transition-all justify-around">
               {icons ? (
                 icons.map((icon, index) => (
-                  <Icon Icon={icon.icon} key={index} title={icon.title}/>
+                  <Icon Icon={icon.icon} key={index} title={icon.title} />
                 ))
               ) : (
                 <></>
@@ -45,20 +45,24 @@ const GridItem = ({
 
           <div className="flex md:justify-evenly justify-between md:p-4 p-2 absolute left-0  bottom-0 w-full ">
             <Tile
-              text="App" 
-              link={linkApp} 
+              text="App"
+              link={linkApp}
+              target="_blank"
               hoverTextColor="hover:text-light-color"
               hoverBgColor="hover:bg-violet"
               hoverShadowColor="hover:shadow-link-violet"
               darkBgColor="dark:bg-violet"
-               />
+              darkHoverTextColor="dark:hover:text-dark-color"
+            />
             <Tile
               text="<Code />"
               link={linkCode}
-             hoverTextColor="hover:text-light-color"
-             hoverBgColor="hover:bg-violet"
-             hoverShadowColor="hover:shadow-link-violet"
-             darkBgColor="dark:bg-violet"
+              target="_blank"
+              hoverTextColor="hover:text-light-color"
+              hoverBgColor="hover:bg-violet"
+              hoverShadowColor="hover:shadow-link-violet"
+              darkBgColor="dark:bg-violet"
+              darkHoverTextColor="dark:hover:text-dark-color"
             />
           </div>
         </div>

@@ -8,13 +8,13 @@ const Hero = () => {
               Hi, i'm Mike
             </h2>
 
-            <h1 className="text-6xl font-black text-violet-dark dark:text-violet opacity-0 animate-fadeIn3s transition-all duration-300 delay-150">
+            <h1 className="text-6xl font-black text-violet-dark dark:text-violet opacity-0 animate-fadeIn3s transition-all duration-300 delay-150 p-4 text-center">
               Web Developer
             </h1>
           </div>
         </div>
         <div className="absolute translate-y-[12rem] w-full p-4 flex justify-center">
-          <p className="opacity-0 first-letter:uppercase text-xl font-bold transition-all delay-150 duration-300 text-center w-full md:w-[80%] lg:w-[75%] animate-fadeIn4s">
+          <p className="opacity-0 first-letter:uppercase text-xl font-bold transition-all p-4 delay-150 duration-300 text-center w-[90%] md:w-[60%]  animate-fadeIn4s">
             Based in Siedlce, Poland. I like simple, minimalistic designs,
             learning new things and a cup of good coffee.
           </p>

@@ -44,7 +44,9 @@ module.exports = {
         "violet-dark-a80": "var(--violet-dark-a80)",
         "react-logo": "#61DBFB",
         "node-logo":  "#679267",
-        "mongo-logo": "#4DB33D"
+        "mongo-logo": "#4DB33D",
+        "git-logo": "#F1502F",
+        "render-logo":"#5EDCB6"
       },
       boxShadow: {
         "link-light-fat": "0rem 0rem 2rem 2px var(--dark)",
@@ -61,6 +63,14 @@ module.exports = {
         "blob2-dark": "2.2rem 4rem 1rem var(--violet-dark)",
       },
       keyframes: {
+        translateLeft: {
+          "0%":{
+            transform: "translateX(0%)"
+          },
+          "100%":{
+            transform: "translateX(-100%)"
+          }
+        },
         bloberize1: {
           "11%, 89%": {
             borderRadius: "42% 58% 48% 52% / 18% 66% 34% 82%",
@@ -335,7 +345,8 @@ module.exports = {
         blobAround1: "fadeIn ease-in 1s 4s forwards, bloberize1 ease-in-out 90s infinite",
         blobAround2: "slideIn2 ease-out 3s 2s forwards,  bloberize2 ease-in-out 30s infinite",
         blobAround3: "fadeIn ease-in 1s 5s forwards, bloberize3 ease-in-out 35s infinite",
-        bump: "bump cubic-bezier(.94,.03,.11,1.01) 1s forwards"
+        bump: "bump cubic-bezier(.94,.03,.11,1.01) 1s forwards",
+        translateLeft: "translateLeft linear 20s infinite"
       },
     },
   },
