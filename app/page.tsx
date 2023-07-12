@@ -1,10 +1,13 @@
 
+
 import Footer from "./components/static/Footer";
 import Header from "./components/dynamic/Header";
 import Landing from "./components/Landing";
 import ProjectsShowcase from "./components/ProjectsShowcase";
 import About from "./components/About";
 import Contact from "./components/Contact";
+
+
 
 export default function Home() {
   return (
@@ -18,6 +21,7 @@ export default function Home() {
         <ProjectsShowcase />
         <About />
         <Contact />
+
       </main>
       <Footer />
     </>

@@ -19,6 +19,7 @@ import {
   SiNodedotjs,
   SiGithub,
   SiGit,
+  SiTrpc,
 } from "react-icons/si";
 const About = () => {
   const [showIcons, setShowIcons] = useState(false);
@@ -26,10 +27,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-fixed group mb-32 mt-32 text-light-color bg-dark-color dark:text-dark-color dark:bg-light-a80 relative flex justify-center dark:shadow-link-dark-fat shadow-link-light-fat bg-gradient-grid dark:bg-gradient-grid-dark bg-3x3 animate-gridMove dark:animate-gridMoveDark transition-all 500ms delay-75"
+      className="bg-fixed group mb-16 mt-32 text-light-color bg-dark-color dark:text-dark-color dark:bg-light-a80 relative flex justify-center dark:shadow-link-dark-fat shadow-link-light-fat bg-gradient-grid dark:bg-gradient-grid-dark bg-3x3 animate-gridMove dark:animate-gridMoveDark transition-all 500ms delay-75"
     >
       <div className="flex flex-col items-center p-4 sm:p-8 pt-16 pb-16 backdrop-blur-sm bg-transparent w-full dark:hover:backdrop-saturate-100 hover:backdrop-saturate-200 transition-all 300ms">
-        <div className="flex flex-col items-center dark:bg-light-color dark:shadow-link-dark-fat bg-dark-color shadow-link-light-fat p-4 sm:p-8 w-full lg:w-[70%] md:w-[80%] sm:w-[90%]">
+        <div className="flex flex-col items-center dark:bg-light-color dark:shadow-link-dark-fat bg-dark-color shadow-link-light-fat p-4 sm:p-8 w-full lg:w-[70%] md:w-[80%] sm:w-[90%]  ring-inset ring-2 ring-violet-a40">
           <h3 className="text-2xl font-bold first-letter:capitalize text-center p-8 sm:mt-12">
             Experience
           </h3>
@@ -37,7 +38,7 @@ const About = () => {
             <p></p>
           ) : (
             <p className="p-8 text-center">
-              Working on personal projects taught me that even without an official education, with perseverance you can build almost anything.
+              Working on personal projects taught me that even without an official education, with perseverance, you can build almost anything.
             </p>
           )}
           <div className="p-8">
@@ -53,7 +54,7 @@ const About = () => {
               darkHoverShadowColor="dark:hover:shadow-link-violet"
             />
           </div>
-          <h5 className="p-1 text-center text-lg font-bold mt-12">
+          <h5 className="p-1 text-center text-lg font-bold md:mt-12 mt-6">
             Under My Toolbelt :
           </h5>
           <div className="flex justify-evenly gap-1 md:gap-8 sm:gap-4 pb-4 pt-8  flex-wrap">
@@ -163,7 +164,7 @@ const About = () => {
               darkHoverShadowColor="dark:hover:shadow-link-violet"
             />
           </div>
-          <h5 className="p-1 text-center text-lg font-bold mt-12">
+          <h5 className="p-1 text-center text-lg font-bold md:mt-12 mt-6">
             Currently im learning
           </h5>
           <div className="flex justify-evenly p-12 w-[80%] flex-wrap">
@@ -180,7 +181,34 @@ const About = () => {
               DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
             />
           </div>
+          <h5 className="p-1 text-center text-lg font-bold mt-12">
+            On my radar
+          </h5>
+          <div className="flex justify-evenly p-12 w-[80%] flex-wrap">
+            <Icon
+              Icon={SiTrpc}
+              title="trpc"
+              darkHoverTextColor="dark:hover:text-dark-color"
+              DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+            />
+             <Icon
+              Icon={SiTailwindcss}
+              text="Oxide"
+              title="Tailwind Oxide"
+              darkHoverTextColor="dark:hover:text-dark-color"
+              DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+            />
+             <Icon
+              Icon={SiTailwindcss}
+              text="Catalyst"
+              title="Tailwind Catalyst"
+              darkHoverTextColor="dark:hover:text-dark-color"
+              DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+            />
+       
+          </div>
         </div>
+        
       </div>
     </section>
   );

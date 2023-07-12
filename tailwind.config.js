@@ -46,7 +46,7 @@ module.exports = {
         "node-logo":  "#679267",
         "mongo-logo": "#4DB33D",
         "git-logo": "#F1502F",
-        "render-logo":"#5EDCB6"
+        "render-logo":"#5EDCB6",
       },
       boxShadow: {
         "link-light-fat": "0rem 0rem 2rem 2px var(--dark)",
@@ -61,6 +61,7 @@ module.exports = {
         "blob2-light": "2.2rem 4rem 1rem var(--dark)",
         "blob1-dark": "-2.2rem 4rem 1rem var(--violet-dark)",
         "blob2-dark": "2.2rem 4rem 1rem var(--violet-dark)",
+        "basic-light":"0rem 0rem 1rem var(--light)"
       },
       keyframes: {
         translateLeft: {
@@ -342,6 +343,7 @@ module.exports = {
         fadeIn3s: "fadeIn ease-in 1s 3s forwards",
         fadeIn4s: "fadeIn ease-in 1s 4s forwards",
         fadeIn5s: "fadeIn ease-in 1s 5s forwards",
+        fadeInOut: "fadeIn ease-out 0.5s forwards, fadeOut ease-in 0.5s 1.5s forwards",
         blobAround1: "fadeIn ease-in 1s 4s forwards, bloberize1 ease-in-out 90s infinite",
         blobAround2: "slideIn2 ease-out 3s 2s forwards,  bloberize2 ease-in-out 30s infinite",
         blobAround3: "fadeIn ease-in 1s 5s forwards, bloberize3 ease-in-out 35s infinite",

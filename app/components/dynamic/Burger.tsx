@@ -13,6 +13,7 @@ const Burger = () => {
             text="Projects"
             link="#projects"
             darkHoverTextColor="dark:hover:text-dark-color"
+            cursor="cursor-pointer"
           />
         </li>
         <li className="p-1 md:h-auto">
@@ -20,6 +21,7 @@ const Burger = () => {
             text="About"
             link="#about"
             darkHoverTextColor="dark:hover:text-dark-color"
+            cursor="cursor-pointer"
           />
         </li>
         <li className="p-1 md:h-auto">
@@ -27,6 +29,7 @@ const Burger = () => {
             text="Contact"
             link="#contact"
             darkHoverTextColor="dark:hover:text-dark-color"
+            cursor="cursor-pointer"
           />
         </li>
       </ul>
@@ -66,7 +69,7 @@ const Burger = () => {
             );
           }
         }}
-        className="md:hidden"
+        className="md:hidden cursor-pointer"
       >
         <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block"></span>
         <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block "></span>
@@ -86,6 +89,7 @@ const Burger = () => {
                     hoverBgColor="hover:bg-violet"
                     hoverShadowColor="hover:shadow-link-violet"
                     darkHoverTextColor="dark:hover:text-dark-color"
+                    cursor="cursor-pointer"
                   />
                 </a>
               </li>
@@ -96,6 +100,7 @@ const Burger = () => {
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"
+                  cursor="cursor-pointer"
                 />
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
@@ -105,6 +110,7 @@ const Burger = () => {
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"
+                  cursor="cursor-pointer"
                 />
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
@@ -114,6 +120,7 @@ const Burger = () => {
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"
+                  cursor="cursor-pointer"
                 />
               </li>
             </ul>

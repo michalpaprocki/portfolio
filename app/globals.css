@@ -13,8 +13,8 @@
   --violet-dark: hsl(271, 100%, 25%);
   --violet-dark-a40: hsla(271, 100%, 25%, 0.4);
   --violet-dark-a80: hsla(271, 100%, 25%, 0.8);
-  --memory: url('/images/memory.png');
   --headerH: 5rem;
+  
 }
 html {
   scroll-behavior: smooth;
