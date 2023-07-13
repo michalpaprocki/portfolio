@@ -42,7 +42,7 @@ const DayAndNight = () => {
           <MdContrast /> System
         </span>
         <span
-          className=" cursor-pointerh-8 w-[7rem] overflow-hidden p-1 flex items-center whitespace-pre-wrap hover:bg-dark-color hover:text-light-color dark:hover:bg-light-color dark:hover:text-dark-color hover:shadow-link-light dark:hover:shadow-link-dark after:h-16 after:w-1 after:bg-light-color after:shadow-link-dark-fat after:hover:animate-slide after:invisivble after:hover:visible after:dark:bg-dark-color after:dark:shadow-link-light-fat after:blur-sm "
+          className=" cursor-pointer h-8 w-[7rem] overflow-hidden p-1 flex items-center whitespace-pre-wrap hover:bg-dark-color hover:text-light-color dark:hover:bg-light-color dark:hover:text-dark-color hover:shadow-link-light dark:hover:shadow-link-dark after:h-16 after:w-1 after:bg-light-color after:shadow-link-dark-fat after:hover:animate-slide after:invisivble after:hover:visible after:dark:bg-dark-color after:dark:shadow-link-light-fat after:blur-sm "
           onClick={(e) => {
             setIcon(IconType.light);
             document.documentElement.classList.remove("dark");

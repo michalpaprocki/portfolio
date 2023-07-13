@@ -27,10 +27,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-fixed group mb-16 mt-32 text-light-color bg-dark-color dark:text-dark-color dark:bg-light-a80 relative flex justify-center dark:shadow-link-dark-fat shadow-link-light-fat bg-gradient-grid dark:bg-gradient-grid-dark bg-3x3 animate-gridMove dark:animate-gridMoveDark transition-all 500ms delay-75"
+      className="bg-fixed group mb-16 mt-32 text-light-color bg-dark-color dark:text-dark-color dark:bg-light-a80 relative flex justify-center dark:shadow-link-dark-fat shadow-inner bg-gradient-grid dark:bg-gradient-grid-dark bg-3x3 animate-gridMove dark:animate-gridMoveDark transition-all 500ms delay-75"
     >
       <div className="flex flex-col items-center p-4 sm:p-8 pt-16 pb-16 backdrop-blur-sm bg-transparent w-full dark:hover:backdrop-saturate-100 hover:backdrop-saturate-200 transition-all 300ms">
-        <div className="flex flex-col items-center dark:bg-light-color dark:shadow-link-dark-fat bg-dark-color shadow-link-light-fat p-4 sm:p-8 w-full lg:w-[70%] md:w-[80%] sm:w-[90%]  ring-inset ring-2 ring-violet-a40">
+        <div className="rounded-md overflow-clip flex flex-col items-center dark:bg-light-color dark:shadow-link-dark-fat bg-dark-color shadow-link-light-fat p-4 sm:p-8 w-full lg:w-[70%] md:w-[80%] sm:w-[90%] ring-inset ring-2 ring-violet-a40
+        ">
           <h3 className="text-2xl font-bold first-letter:capitalize text-center p-8 sm:mt-12">
             Experience
           </h3>
@@ -165,7 +166,7 @@ const About = () => {
             />
           </div>
           <h5 className="p-1 text-center text-lg font-bold md:mt-12 mt-6">
-            Currently im learning
+            Currently learning
           </h5>
           <div className="flex justify-evenly p-12 w-[80%] flex-wrap">
             <Icon
