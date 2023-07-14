@@ -160,18 +160,16 @@ const Contact = () => {
         ></div>
       </div>
       {notify.show ? (
-        <Portal
-          children={
-            <Notification
-              fn={(e) => {
-                e.animationName == "fadeOut"
-                  ? setNotify({ show: false, message: "" })
-                  : null;
-              }}
-              message={notify.message}
-            />
-          }
-        />
+        <Portal>
+          <Notification
+            fn={(e) => {
+              e.animationName == "fadeOut"
+                ? setNotify({ show: false, message: "" })
+                : null;
+            }}
+            message={notify.message}
+          />
+        </Portal>
       ) : (
         <></>
       )}
