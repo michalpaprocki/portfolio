@@ -21,5 +21,5 @@ export async function POST(req: Request) {
     const resp = await prisma.message.create({ data:{email: body.email, name: body.name, message: body.message}});
     
   }
-  return NextResponse.json({ message: "Message sent. Thank You!" });
+  return NextResponse.json({ message: `Thank You ${body.name}!` });
 }

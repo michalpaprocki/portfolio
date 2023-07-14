@@ -51,7 +51,7 @@ const ProjectsShowcase = () => {
           ]}
         />
         <GridItem
-          description="Blogging site in plain Javascript. Backend running on Express/EJS with MongoDB."
+          description="Blogging site in plain Javascript, Express/EJS with MongoDB. Hosted on Render, might take up to 1 minute to spin up."
           title="Blogging Site"
           image="blogga.png"
           linkApp="https://blogga-v17g.onrender.com"

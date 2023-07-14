@@ -12,9 +12,7 @@ const Contact = () => {
   const [notify, setNotify] = useState({ show: false, message: "" });
   const [canSend, setCanSend] = useState(true);
 
-
   const sendMessage = async (name: string, email: string, message: string) => {
-
     if (name.length == 0) {
       setNotify({ show: true, message: "Please provide a name" });
     } else if (name.length <= 2) {
@@ -30,17 +28,17 @@ const Contact = () => {
     } else if (message.length == 0) {
       setNotify({ show: true, message: "Please provide a message" });
     } else {
-      setNotify({show:true, message: "Sending ..."})
-      setCanSend(false)
+      setNotify({ show: true, message: "Sending ..." });
+      setCanSend(false);
       const resp = await fetch("/api/send-message", {
-        headers:{
-          "content-type": "application/json"
+        headers: {
+          "content-type": "application/json",
         },
         method: "POST",
-        body: JSON.stringify({name, email, message}),
+        body: JSON.stringify({ name, email, message }),
       });
       const parsedResp = await resp.json();
-      setCanSend(true)
+      setCanSend(true);
       setNotify({ show: true, message: parsedResp.message });
     }
   };
@@ -83,7 +81,7 @@ const Contact = () => {
               onChange={(e) => {
                 setName(e.currentTarget.value);
               }}
-              onPaste={(e)=>{
+              onPaste={(e) => {
                 setName(e.currentTarget.value);
               }}
               className="p-2 text-dark-color rounded-md outline-none shadow-inner shadow-violet-a40 dark:ring-violet-a40 dark:ring-2 dark:ring-inset"
@@ -96,7 +94,7 @@ const Contact = () => {
               onChange={(e) => {
                 setEmail(e.currentTarget.value);
               }}
-              onPaste={(e)=>{
+              onPaste={(e) => {
                 setEmail(e.currentTarget.value);
               }}
               className="p-2 text-dark-color rounded-md outline-none shadow-inner shadow-violet-a40 dark:ring-violet-a40 dark:ring-2 dark:ring-inset"
@@ -111,7 +109,7 @@ const Contact = () => {
               onChange={(e) => {
                 setMessage(e.currentTarget.value);
               }}
-              onPaste={(e)=>{
+              onPaste={(e) => {
                 setMessage(e.currentTarget.value);
               }}
               className="p-2 text-dark-color my-6 resize-none rounded-md outline-none shadow-inner shadow-violet-a40 dark:ring-violet-a40 dark:ring-2 dark:ring-inset"
@@ -120,40 +118,40 @@ const Contact = () => {
               cols={30}
               rows={10}
             ></textarea>
-        {canSend?     <Tile
-              text="Send"
-              darkBgColor="dark:bg-violet"
-              darkHoverBgColor="dark:hover:bg-light-color"
-              darkHoverTextColor="dark:hover:text-dark-color"
-              bgColor="bg-violet"
-              textColor="text-light-color"
-              hoverTextColor="hover:text-dark-color"
-              hoverBgColor="hover:bg-light-color"
-              hoverShadowColor="hover:shadow-link-dark"
-              animationColor="md:after:shadow-link-light-fat"
-              animationShadowColor="md:after:bg-dark-color"
-              cursor="cursor-pointer"
-              fn={(e) => {
-                sendMessage(name, email, message);
-
-              }}
-            />:     <Tile
-            text="Sending..."
-            darkBgColor="dark:bg-violet"
-            darkHoverBgColor="dark:hover:bg-light-color"
-            darkHoverTextColor="dark:hover:text-dark-color"
-            bgColor="bg-violet"
-            textColor="text-light-color"
-            hoverTextColor="hover:text-dark-color"
-            hoverBgColor="hover:bg-light-color"
-            hoverShadowColor="hover:shadow-link-dark"
-            animationColor="md:after:shadow-link-light-fat"
-            animationShadowColor="md:after:bg-dark-color"
-            cursor="cursor-pointer"
-      
-
-            
-          />}
+            {canSend ? (
+              <Tile
+                text="Send"
+                darkBgColor="dark:bg-violet"
+                darkHoverBgColor="dark:hover:bg-light-color"
+                darkHoverTextColor="dark:hover:text-dark-color"
+                bgColor="bg-violet"
+                textColor="text-light-color"
+                hoverTextColor="hover:text-dark-color"
+                hoverBgColor="hover:bg-light-color"
+                hoverShadowColor="hover:shadow-link-dark"
+                animationColor="md:after:shadow-link-light-fat"
+                animationShadowColor="md:after:bg-dark-color"
+                cursor="cursor-pointer"
+                fn={(e) => {
+                  sendMessage(name, email, message);
+                }}
+              />
+            ) : (
+              <Tile
+                text="Sending..."
+                darkBgColor="dark:bg-violet"
+                darkHoverBgColor="dark:hover:bg-light-color"
+                darkHoverTextColor="dark:hover:text-dark-color"
+                bgColor="bg-violet"
+                textColor="text-light-color"
+                hoverTextColor="hover:text-dark-color"
+                hoverBgColor="hover:bg-light-color"
+                hoverShadowColor="hover:shadow-link-dark"
+                animationColor="md:after:shadow-link-light-fat"
+                animationShadowColor="md:after:bg-dark-color"
+                cursor="cursor-pointer"
+              />
+            )}
           </form>
         </div>
         <div

@@ -36,10 +36,10 @@ const About = () => {
             Experience
           </h3>
           {showText ? (
-            <p></p>
+            <p className="p-8 text-center">Working on personal projects taught me that, even without an official education, with perseverance, you can build almost anything.</p>
           ) : (
             <p className="p-8 text-center">
-              Working on personal projects taught me that even without an official education, with perseverance, you can build almost anything.
+             
             </p>
           )}
           <div className="p-8">
@@ -58,7 +58,7 @@ const About = () => {
           <h5 className="p-1 text-center text-lg font-bold md:mt-12 mt-6">
             Under My Toolbelt :
           </h5>
-          <div className="flex justify-evenly gap-1 md:gap-8 sm:gap-4 pb-4 pt-8  flex-wrap">
+          <div className="flex justify-evenly gap-1 md:gap-8 sm:gap-4 pb-4 pt-8 px-2 md:p-8  flex-wrap">
             <Icon
               Icon={SiJavascript}
               title="Javacript"
@@ -166,7 +166,7 @@ const About = () => {
             />
           </div>
           <h5 className="p-1 text-center text-lg font-bold md:mt-12 mt-6">
-            Currently learning
+            Currently learning :
           </h5>
           <div className="flex justify-evenly p-12 w-[80%] flex-wrap">
             <Icon
@@ -183,7 +183,7 @@ const About = () => {
             />
           </div>
           <h5 className="p-1 text-center text-lg font-bold mt-12">
-            On my radar
+            On my radar :
           </h5>
           <div className="flex justify-evenly p-12 w-[80%] flex-wrap">
             <Icon

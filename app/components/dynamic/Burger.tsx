@@ -2,45 +2,30 @@
 import Tile from "./Tile";
 import DayAndNight from "./DayAndNight";
 import { useState } from "react";
-import Logo from "../static/Logo";
+
 const Burger = () => {
   const [isOpen, setOpen] = useState(false);
+  const [animation, setAnimation] = useState('')
+
+  const animate = async (ms:number) => {
+    if(isOpen){
+
+      setAnimation("animate-fadeOut01s")
+      await new Promise(r => setTimeout(r, ms))
+      setOpen(!isOpen)
+    } else {
+      setAnimation("animate-fadeIn01s")
+      await new Promise(r => setTimeout(r, ms))
+      setOpen(!isOpen)
+    }
+
+  }
   return (
     <>
-      <ul className="md:flex hidden">
-        <li className="p-1 md:h-auto">
-          <Tile
-            text="Projects"
-            link="#projects"
-            darkHoverTextColor="dark:hover:text-dark-color"
-            cursor="cursor-pointer"
-          />
-        </li>
-        <li className="p-1 md:h-auto">
-          <Tile
-            text="About"
-            link="#about"
-            darkHoverTextColor="dark:hover:text-dark-color"
-            cursor="cursor-pointer"
-          />
-        </li>
-        <li className="p-1 md:h-auto">
-          <Tile
-            text="Contact"
-            link="#contact"
-            darkHoverTextColor="dark:hover:text-dark-color"
-            cursor="cursor-pointer"
-          />
-        </li>
-      </ul>
-      <ul className="hidden md:block">
-        <li className="p-1">
-          <DayAndNight />
-        </li>
-      </ul>
+     
       <div
         onClick={(e) => {
-          setOpen(!isOpen);
+          animate(100);
           if (!isOpen) {
             e.currentTarget.children[0].classList.remove(
               "animate-normalize_upper_burger"
@@ -77,8 +62,8 @@ const Burger = () => {
       </div>
       {isOpen ? (
         <>
-          <div className="md:hidden absolute top-0 min-h-[calc(100lvh-var(--headerH))] translate-y-[var(--headerH)] w-full backdrop-blur-sm bg-dark-a80 dark:bg-violet-a80">
-            <ul className="min-h-[calc(100dvh-var(--headerH))] flex flex-col items-center justify-evenly">
+          <div  className={`md:hidden opacity-0 absolute top-0 translate-y-[var(--headerH)] w-full backdrop-blur-sm bg-dark-a80 dark:bg-violet-a80 ${animation}`}>
+            <ul className=" min-h-[calc(100dvh-var(--headerH))] flex flex-col items-center justify-evenly">
               <li className=" dark:bg-dark-color bg-light-color">
                 <DayAndNight />
               </li>
