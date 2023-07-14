@@ -1,10 +1,12 @@
 import "./globals.css";
 import Script from "next/script";
-export const metadata = {
+import { Metadata } from "next";
 
-};
-
-
+export const metadata: Metadata = {
+  title:'My Website', icons:{
+    icon: "./images/icon.ico"
+  },
+}
 export default function RootLayout({
   children,
 }: {
