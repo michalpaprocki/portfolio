@@ -4,7 +4,9 @@ import { TbCopy } from "react-icons/tb";
 import Portal from "./dynamic/Portal";
 import Notification from "./dynamic/Notification";
 import Tile from "./dynamic/Tile";
-
+import { SiGithub } from "react-icons/si";
+import Icon from "./static/Icon";
+import Link from "next/link";
 const Contact = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -44,21 +46,21 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="relative pt-[var(--headerH)] pb-5">
-      <div className="flex lg:flex-row lg:items-start items-center justify-center flex-col">
+      <div className="flex xl:flex-row xl:items-start items-center justify-center flex-col">
         <div className=" mx-8">
-          <h5 className="p-8 text-xl font-bold mb-8 lg:text-center text-left">
+          <h5 className="text-xl font-bold my-10 text-center">
             Contact me ...
           </h5>
           <div className="flex p-4 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset">
-            <span className="p-1 text-lg font-semibold">Email :</span>
+            <span className="p-1 text-xl font-semibold whitespace-nowrap">Email :</span>
 
-            <span className="p-1 text-lg font-semibold">
-              Actual email adress
+            <span className="p-1 text-xl font-semibold">
+              michalpaprocki@proton.me
             </span>
             <span
               className=" hover:drop-shadow-basic-light hover:-translate-y-1 active:text-violet transition-transform "
               onClick={(e) => {
-                navigator.clipboard.writeText("Actual email adress");
+                navigator.clipboard.writeText("michalpaprocki@proton.me");
                 setNotify({ show: true, message: "Email adress copied" });
               }}
             >
@@ -67,8 +69,8 @@ const Contact = () => {
           </div>
         </div>
         <div className=" mx-8">
-          <h6 className="p-8 my-4 font-bold text-lg text-right lg:text-center">
-            ... or drop me a message:
+          <h6 className="my-10 font-bold text-xl text-center">
+            ... drop me a message ...
           </h6>
           <form
             onSubmit={(e) => {
@@ -154,9 +156,24 @@ const Contact = () => {
             )}
           </form>
         </div>
+        <div className=" mx-8 ">
+          <h6 className="my-10 font-bold text-xl text-right xl:text-center">
+            ... or check out my GitHub profile.
+          </h6>
+          <div className="flex p-4 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
+            <Link href="https://github.com/str4ng3love" target="_blank">
+              <Icon
+                Icon={SiGithub}
+                title="GitHub"
+                darkHoverTextColor="dark:hover:text-light-color"
+                DarkHoverAfterTextColor="dark:hover:after:text-light-color"
+              />
+            </Link>
+          </div>
+        </div>
         <div
           onClick={(e) => {}}
-          className={`hidden lg:block active:border-2 hover:-hue-rotate-60 opacity-0 absolute blob3 bg-violet-dark-a40 dark:bg-violet-a40 blur-sm animate-blobAround3 left-[25rem] transition-all ease-in-out duration-1000 delay-100 rotate-12`}
+          className={`hidden xl:block active:border-2 hover:-hue-rotate-60 opacity-0 absolute blob3 bg-violet-dark-a40 dark:bg-violet-a40 blur-sm animate-blobAround3 left-[25rem] transition-all ease-in-out duration-1000 delay-100 rotate-12`}
         ></div>
       </div>
       {notify.show ? (

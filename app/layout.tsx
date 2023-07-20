@@ -3,10 +3,11 @@ import Script from "next/script";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:'My Website', icons:{
-    icon: "./images/icon.ico"
+  title: "Michał Paprocki | Web Developer",
+  icons: {
+    icon: "./images/icon.ico",
   },
-}
+};
 export default function RootLayout({
   children,
 }: {

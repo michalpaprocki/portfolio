@@ -47,6 +47,8 @@ module.exports = {
         "mongo-logo": "#4DB33D",
         "git-logo": "#F1502F",
         "render-logo":"#5EDCB6",
+        "svelte-logo": "#EF4823",
+        "electron-logo": "#89eef3"
       },
       boxShadow: {
         "link-light-fat": "0rem 0rem 2rem 2px var(--dark)",

@@ -20,6 +20,8 @@ import {
   SiGithub,
   SiGit,
   SiTrpc,
+  SiSvelte,
+  SiElectron,
 } from "react-icons/si";
 const About = () => {
   const [showIcons, setShowIcons] = useState(false);
@@ -36,10 +38,12 @@ const About = () => {
             Experience
           </h3>
           {showText ? (
-            <p className="p-8 text-center">Working on personal projects taught me that, even without an official education, with perseverance, you can build almost anything.</p>
+            <p className="p-8 text-center">
+              
+            </p>
           ) : (
             <p className="p-8 text-center">
-             
+              
             </p>
           )}
           <div className="p-8">
@@ -55,8 +59,8 @@ const About = () => {
               darkHoverShadowColor="dark:hover:shadow-link-violet"
             />
           </div>
-          <h5 className="p-1 text-center text-lg font-bold md:mt-12 mt-6">
-            Under My Toolbelt :
+          <h5 className="p-1 text-center text-lg font-bold mt-12">
+            Tools I Use :
           </h5>
           <div className="flex justify-evenly gap-1 md:gap-8 sm:gap-4 pb-4 pt-8 px-2 md:p-8  flex-wrap">
             <Icon
@@ -165,10 +169,10 @@ const About = () => {
               darkHoverShadowColor="dark:hover:shadow-link-violet"
             />
           </div>
-          <h5 className="p-1 text-center text-lg font-bold md:mt-12 mt-6">
-            Currently learning :
+          <h5 className="p-1 text-center text-lg font-bold mt-12">
+            Currently Learning :
           </h5>
-          <div className="flex justify-evenly p-12 w-[80%] flex-wrap">
+          <div className="flex justify-evenly gap-1 md:gap-8 sm:gap-4 pb-4 pt-8 px-2 md:p-8  flex-wrap">
             <Icon
               Icon={SiPython}
               title="Python"
@@ -183,9 +187,9 @@ const About = () => {
             />
           </div>
           <h5 className="p-1 text-center text-lg font-bold mt-12">
-            On my radar :
+            On My Radar :
           </h5>
-          <div className="flex justify-evenly p-12 w-[80%] flex-wrap">
+          <div className="flex justify-evenly gap-1 md:gap-8 sm:gap-4 pb-4 pt-8 px-2 md:p-8  flex-wrap">
             <Icon
               Icon={SiTrpc}
               title="trpc"
@@ -204,6 +208,18 @@ const About = () => {
               text="Catalyst"
               title="Tailwind Catalyst"
               darkHoverTextColor="dark:hover:text-dark-color"
+              DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+            />
+            <Icon
+              Icon={SiSvelte}
+              title="Svelte"
+              darkHoverTextColor="dark:hover:text-svelte-logo"
+              DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+            />
+               <Icon
+              Icon={SiElectron}
+              title="Electron"
+              darkHoverTextColor="dark:hover:text-electron-logo"
               DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
             />
        
