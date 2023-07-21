@@ -43,7 +43,7 @@ const Tile = ({
         <a
           target={target}
           href={link}
-          className={`md:overflow-clip  ${cursor} ${bgColor} ${textColor} ${darkBgColor} ${darkHoverBgColor} ${darkTextColor} select-none font-bold p-1 h-16 w-[10rem] md:h-8 md:w-[7rem] flex items-center justify-center whitespace-pre-wrap ${hoverBgColor} ${hoverTextColor} ${darkHoverTextColor} ${hoverShadowColor} ${darkHoverShadowColor} md:after:h-16 md:after:w-1 ${animationColor} ${animationColor} md:after:hover:animate-slide md:after:invisible md:after:dark:bg-dark-color md:after:hover:visible md:after:dark:shadow-link-light-fat md:after:blur-sm transition-all`}
+          className={`md:overflow-clip ${cursor} ${bgColor} ${textColor} ${darkBgColor} ${darkHoverBgColor} ${darkTextColor} select-none font-bold p-1 h-16 w-[10rem] md:h-8 md:w-[7rem] flex items-center justify-center whitespace-pre-wrap ${hoverBgColor} ${hoverTextColor} ${darkHoverTextColor} ${hoverShadowColor} ${darkHoverShadowColor} md:after:h-16 md:after:w-1 ${animationColor} ${animationColor} md:after:hover:animate-slide md:after:invisible md:after:dark:bg-dark-color md:after:hover:visible md:after:dark:shadow-link-light-fat md:after:blur-sm transition-all`}
         >
           {text}
         </a>

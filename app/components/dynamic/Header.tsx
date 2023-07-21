@@ -1,7 +1,9 @@
 "use client";
 import Logo from "../static/Logo";
 import Burger from "./Burger";
+import useLink from "@/hooks/useLink";
 const Header = () => {
+
   return (
     <nav
       id="navbar"
@@ -9,9 +11,10 @@ const Header = () => {
     >
       <ul className="flex items-center">
         <li className="p-1">
-          <a href="#up">
-            <Logo text="MP" />
-          </a>
+          
+          
+            <Logo text="MP" fn={(e)=>useLink("navbar")} />
+         
         </li>
       </ul>
       <Burger />

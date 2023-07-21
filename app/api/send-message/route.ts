@@ -1,4 +1,4 @@
-import { NextResponse, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 interface Body {
   name: string;
@@ -18,8 +18,15 @@ export async function POST(req: Request) {
 
   if (isBody(body)) {
     const prisma = new PrismaClient();
+    try {
+      
     const resp = await prisma.message.create({ data:{email: body.email, name: body.name, message: body.message}});
-    
+    return NextResponse.json({ message: `Thank You ${body.name}!` });
+    } catch (error) {
+      if(error){
+        return NextResponse.json({ message: `Internal Server Error` }, {status: 500});
+      }
+    }
   }
-  return NextResponse.json({ message: `Thank You ${body.name}!` });
+  
 }

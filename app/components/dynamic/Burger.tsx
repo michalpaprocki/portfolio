@@ -2,57 +2,56 @@
 import Tile from "./Tile";
 import DayAndNight from "./DayAndNight";
 import { useState } from "react";
+import useLink from "@/hooks/useLink";
 
 const Burger = () => {
   const [isOpen, setOpen] = useState(false);
-  const [animation, setAnimation] = useState('')
+  const [animation, setAnimation] = useState("");
 
-  const animate = async (ms:number) => {
-    if(isOpen){
-
-      setAnimation("animate-fadeOut01s")
-      await new Promise(r => setTimeout(r, ms))
-      setOpen(!isOpen)
+  const animate = async (ms: number) => {
+    if (isOpen) {
+      setAnimation("animate-fadeOut01s");
+      await new Promise((r) => setTimeout(r, ms));
+      setOpen(!isOpen);
     } else {
-      setAnimation("animate-fadeIn01s")
-      await new Promise(r => setTimeout(r, ms))
-      setOpen(!isOpen)
+      setAnimation("animate-fadeIn01s");
+      await new Promise((r) => setTimeout(r, ms));
+      setOpen(!isOpen);
     }
-
-  }
+  };
   return (
     <>
       <ul className="md:flex hidden">
-          <li className="p-1 md:h-auto">
-            <Tile
-              text="Projects"
-              link="#projects"
-              darkHoverTextColor="dark:hover:text-dark-color"
-              cursor="cursor-pointer"
-            />
-          </li>
-          <li className="p-1 md:h-auto">
-            <Tile
-              text="About"
-              link="#about"
-              darkHoverTextColor="dark:hover:text-dark-color"
-              cursor="cursor-pointer"
-            />
-          </li>
-          <li className="p-1 md:h-auto">
-            <Tile
-              text="Contact"
-              link="#contact"
-              darkHoverTextColor="dark:hover:text-dark-color"
-              cursor="cursor-pointer"
-            />
-          </li>
-        </ul>
-        <ul className="hidden md:block">
-          <li className="p-1">
-            <DayAndNight />
-          </li>
-        </ul>
+        <li className="p-1 md:h-auto">
+          <Tile
+            text="Projects"
+            fn={(e) => useLink("projects")}
+            darkHoverTextColor="dark:hover:text-dark-color"
+            cursor="cursor-pointer"
+          />
+        </li>
+        <li className="p-1 md:h-auto">
+          <Tile
+            text="About"
+            fn={(e) => useLink("about")}
+            darkHoverTextColor="dark:hover:text-dark-color"
+            cursor="cursor-pointer"
+          />
+        </li>
+        <li className="p-1 md:h-auto">
+          <Tile
+            text="Contact"
+            fn={(e) => useLink("contact")}
+            darkHoverTextColor="dark:hover:text-dark-color"
+            cursor="cursor-pointer"
+          />
+        </li>
+      </ul>
+      <ul className="hidden md:block">
+        <li className="p-1">
+          <DayAndNight />
+        </li>
+      </ul>
       <div
         onClick={(e) => {
           animate(100);
@@ -92,26 +91,29 @@ const Burger = () => {
       </div>
       {isOpen ? (
         <>
-          <div  className={`md:hidden opacity-0 absolute top-0 translate-y-[var(--headerH)] w-full backdrop-blur-sm bg-dark-a80 dark:bg-violet-a80 ${animation}`}>
+          <div
+            className={`md:hidden opacity-0 absolute top-0 translate-y-[var(--headerH)] w-full backdrop-blur-sm bg-dark-a80 dark:bg-violet-a80 ${animation}`}
+          >
             <ul className=" min-h-[calc(100dvh-var(--headerH))] flex flex-col items-center justify-evenly">
               <li className=" dark:bg-dark-color bg-light-color">
                 <DayAndNight />
               </li>
               <li>
-                <a href="#up">
-                  <Tile
-                    text="MP"
-                    hoverBgColor="hover:bg-violet"
-                    hoverShadowColor="hover:shadow-link-violet"
-                    darkHoverTextColor="dark:hover:text-dark-color"
-                    cursor="cursor-pointer"
-                  />
-                </a>
+                <Tile
+                  text="MP"
+                  fn={(e) => useLink("navbar")}
+                  hoverBgColor="hover:bg-violet"
+                  hoverShadowColor="hover:shadow-link-violet"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                  cursor="cursor-pointer"
+                />
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile
                   text="Projects"
-                  link="#projects"
+                  fn={(e) => {
+                    useLink("projects");
+                  }}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"
@@ -121,7 +123,7 @@ const Burger = () => {
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile
                   text="About"
-                  link="#about"
+                  fn={(e) => useLink("about")}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"
@@ -131,7 +133,7 @@ const Burger = () => {
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile
                   text="Contact"
-                  link="#contact"
+                  fn={(e) => useLink("contact")}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"

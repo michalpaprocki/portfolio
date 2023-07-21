@@ -32,19 +32,24 @@ const About = () => {
       className="bg-fixed group mb-16 mt-32 text-light-color bg-dark-color dark:text-dark-color dark:bg-light-a80 relative flex justify-center dark:shadow-link-dark-fat shadow-inner bg-gradient-grid dark:bg-gradient-grid-dark bg-3x3 animate-gridMove dark:animate-gridMoveDark transition-all 500ms delay-75"
     >
       <div className="flex flex-col items-center p-4 sm:p-8 pt-16 pb-16 backdrop-blur-sm bg-transparent w-full dark:hover:backdrop-saturate-100 hover:backdrop-saturate-200 transition-all 300ms">
-        <div className="rounded-md overflow-clip flex flex-col items-center dark:bg-light-color dark:shadow-link-dark-fat bg-dark-color shadow-link-light-fat p-4 sm:p-8 w-full lg:w-[70%] md:w-[80%] sm:w-[90%] ring-inset ring-2 ring-violet-a40
-        ">
+        <div
+          className="rounded-md overflow-clip flex flex-col items-center dark:bg-light-color dark:shadow-link-dark-fat bg-dark-color shadow-link-light-fat p-4 sm:p-8 w-full lg:w-[70%] md:w-[80%] sm:w-[90%] ring-inset ring-2 ring-violet-a40
+        "
+        >
           <h3 className="text-2xl font-bold first-letter:capitalize text-center p-8 sm:mt-12">
             Experience
           </h3>
+          <p className="p-8 sm:w-[80%] w-full text-center text-lg">
+            While working on many personal projects, I learned how to design,
+            build and ship front-end and fullstack web apps. Solid fundamentals,
+            fast learning and perseverance allow me to tackle any project.
+          </p>
           {showText ? (
-            <p className="p-8 text-center">
+            <div className="sm:w-[80%] w-full text-center text-lg">
               
-            </p>
+            </div>
           ) : (
-            <p className="p-8 text-center">
-              
-            </p>
+            <></>
           )}
           <div className="p-8">
             <Tile
@@ -196,14 +201,14 @@ const About = () => {
               darkHoverTextColor="dark:hover:text-dark-color"
               DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
             />
-             <Icon
+            <Icon
               Icon={SiTailwindcss}
               text="Oxide"
               title="Tailwind Oxide"
               darkHoverTextColor="dark:hover:text-dark-color"
               DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
             />
-             <Icon
+            <Icon
               Icon={SiTailwindcss}
               text="Catalyst"
               title="Tailwind Catalyst"
@@ -216,16 +221,14 @@ const About = () => {
               darkHoverTextColor="dark:hover:text-svelte-logo"
               DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
             />
-               <Icon
+            <Icon
               Icon={SiElectron}
               title="Electron"
               darkHoverTextColor="dark:hover:text-electron-logo"
               DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
             />
-       
           </div>
         </div>
-        
       </div>
     </section>
   );
