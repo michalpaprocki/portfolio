@@ -2,7 +2,7 @@
 import Tile from "./Tile";
 import DayAndNight from "./DayAndNight";
 import { useState } from "react";
-import useLink from "@/hooks/useLink";
+import ScrollTo from "@/helper/ScrollTo";
 
 const Burger = () => {
   const [isOpen, setOpen] = useState(false);
@@ -25,7 +25,7 @@ const Burger = () => {
         <li className="p-1 md:h-auto">
           <Tile
             text="Projects"
-            fn={(e) => useLink("projects")}
+            fn={(e) => ScrollTo("projects")}
             darkHoverTextColor="dark:hover:text-dark-color"
             cursor="cursor-pointer"
           />
@@ -33,7 +33,7 @@ const Burger = () => {
         <li className="p-1 md:h-auto">
           <Tile
             text="About"
-            fn={(e) => useLink("about")}
+            fn={(e) => ScrollTo("about")}
             darkHoverTextColor="dark:hover:text-dark-color"
             cursor="cursor-pointer"
           />
@@ -41,7 +41,7 @@ const Burger = () => {
         <li className="p-1 md:h-auto">
           <Tile
             text="Contact"
-            fn={(e) => useLink("contact")}
+            fn={(e) => ScrollTo("contact")}
             darkHoverTextColor="dark:hover:text-dark-color"
             cursor="cursor-pointer"
           />
@@ -101,7 +101,7 @@ const Burger = () => {
               <li>
                 <Tile
                   text="MP"
-                  fn={(e) => useLink("navbar")}
+                  fn={(e) => ScrollTo("navbar")}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"
@@ -112,7 +112,7 @@ const Burger = () => {
                 <Tile
                   text="Projects"
                   fn={(e) => {
-                    useLink("projects");
+                    ScrollTo("projects");
                   }}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
@@ -123,7 +123,7 @@ const Burger = () => {
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile
                   text="About"
-                  fn={(e) => useLink("about")}
+                  fn={(e) => ScrollTo("about")}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"
@@ -133,7 +133,7 @@ const Burger = () => {
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile
                   text="Contact"
-                  fn={(e) => useLink("contact")}
+                  fn={(e) => ScrollTo("contact")}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"

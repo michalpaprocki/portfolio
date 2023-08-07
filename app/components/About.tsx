@@ -22,6 +22,7 @@ import {
   SiTrpc,
   SiSvelte,
   SiElectron,
+  SiHeadlessui,
 } from "react-icons/si";
 const About = () => {
   const [showIcons, setShowIcons] = useState(false);
@@ -69,8 +70,10 @@ const About = () => {
                 </ul>
               </div>
               <p className="sm:w-[80%] w-full text-center text-lg p-8 font-semibold">
-                With ever changing industry landscape, I've grown to understand
-                and embrace the need to stay in the know to keep with it's pace.
+                With ever changing industry landscape, I&aposve grown to understand and embrace the need to stay in the know to keep with it&aposs pace.
+              </p>
+              <p className="sm:w-[80%] w-full text-center text-lg p-8">
+                
               </p>
             </>
           ) : (
@@ -117,7 +120,7 @@ const About = () => {
               darkHoverTextColor="dark:hover:text-sky-400"
               DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
             />
-
+        
             <Icon
               Icon={SiNodedotjs}
               title="Node.js"
@@ -151,6 +154,12 @@ const About = () => {
                   darkHoverTextColor="dark:hover:text-dark-color"
                   DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
                 />
+                    <Icon
+              Icon={SiHeadlessui}
+              title="HeadlessUI"
+              darkHoverTextColor="dark:hover:text-sky-400"
+              DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+            />
                 <Icon
                   Icon={SiExpress}
                   title="Express"

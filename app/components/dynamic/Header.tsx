@@ -1,7 +1,7 @@
 "use client";
+import ScrollTo from "@/helper/ScrollTo";
 import Logo from "../static/Logo";
 import Burger from "./Burger";
-import useLink from "@/hooks/useLink";
 const Header = () => {
 
   return (
@@ -13,7 +13,7 @@ const Header = () => {
         <li className="p-1">
           
           
-            <Logo text="MP" fn={(e)=>useLink("navbar")} />
+            <Logo text="MP" fn={(e)=>ScrollTo("navbar")} />
          
         </li>
       </ul>
