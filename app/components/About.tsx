@@ -70,7 +70,7 @@ const About = () => {
                 </ul>
               </div>
               <p className="sm:w-[80%] w-full text-center text-lg p-8 font-semibold">
-                With ever changing industry landscape, I&aposve grown to understand and embrace the need to stay in the know to keep with it&aposs pace.
+                With ever changing industry landscape, I&apos;ve grown to understand and embrace the need to stay in the know to keep with it&apos;s pace.
               </p>
               <p className="sm:w-[80%] w-full text-center text-lg p-8">
                 
