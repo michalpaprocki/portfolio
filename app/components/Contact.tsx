@@ -52,11 +52,17 @@ const Contact = () => {
             Contact me ...
           </h5>
           <div className="flex p-4 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset">
-            <span className="p-1 text-xl font-semibold whitespace-nowrap">Email :</span>
-
-            <span className="p-1 text-xl font-semibold">
-              michalpaprocki@proton.me
+            <span className="p-1 text-xl font-semibold whitespace-nowrap">
+              Email :
             </span>
+
+            <a
+              href="mailto:michalpaprocki@proton.me"
+              className="p-1 text-xl font-semibold"
+            >
+              michalpaprocki@proton.me
+            </a>
+
             <span
               className=" hover:drop-shadow-basic-light hover:-translate-y-1 active:text-violet transition-transform "
               onClick={(e) => {

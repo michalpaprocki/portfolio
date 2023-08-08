@@ -41,7 +41,7 @@ const About = () => {
             Experience
           </h3>
           <p className="p-8 sm:w-[80%] w-full text-center text-lg semibol">
-            While working on many personal projects, I learned how to design,
+            While working on personal projects, I learned how to design,
             build and ship front-end and fullstack web apps. Solid fundamentals,
             fast learning and perseverance allow me to tackle any project.
           </p>
