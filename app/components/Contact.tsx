@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { TbCopy } from "react-icons/tb";
 import Portal from "./dynamic/Portal";
+import { BsFiletypePdf } from "react-icons/bs";
 import Notification from "./dynamic/Notification";
 import Tile from "./dynamic/Tile";
 import { SiGithub } from "react-icons/si";
@@ -46,6 +47,7 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="relative pt-[var(--headerH)] pb-5">
+  
       <div className="flex xl:flex-row xl:items-start items-center justify-center flex-col">
         <div className=" mx-8">
           <h5 className="text-xl font-bold my-10 text-center">
@@ -58,7 +60,7 @@ const Contact = () => {
 
             <a
               href="mailto:michalpaprocki@proton.me"
-              className="p-1 text-xl font-semibold"
+              className="p-1 text-xl font-semibold hover:text-violet transition-all"
             >
               michalpaprocki@proton.me
             </a>
@@ -196,6 +198,7 @@ const Contact = () => {
       ) : (
         <></>
       )}
+       
     </section>
   );
 };

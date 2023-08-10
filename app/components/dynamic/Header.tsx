@@ -3,7 +3,6 @@ import ScrollTo from "@/helper/ScrollTo";
 import Logo from "../static/Logo";
 import Burger from "./Burger";
 const Header = () => {
-
   return (
     <nav
       id="navbar"
@@ -11,10 +10,7 @@ const Header = () => {
     >
       <ul className="flex items-center">
         <li className="p-1">
-          
-          
-            <Logo text="MP" fn={(e)=>ScrollTo("navbar")} />
-         
+          <Logo text="MP" fn={(e) => ScrollTo("navbar")} />
         </li>
       </ul>
       <Burger />

@@ -38,7 +38,7 @@ const About = () => {
         "
         >
           <h3 className="text-2xl font-bold first-letter:capitalize text-center p-8 sm:mt-12">
-            Experience
+            Skills
           </h3>
           <p className="p-8 sm:w-[80%] w-full text-center text-lg semibol">
             While working on personal projects, I learned how to design,
