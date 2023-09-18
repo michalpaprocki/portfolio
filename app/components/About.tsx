@@ -61,7 +61,7 @@ const About = () => {
                 </ul>
                 <ul className="flex flex-col items-start  sm:p-8 list-inside">
                   <li className="list-disc p-2 ">
-                    Create and Operate Document and MySQL Databases
+                    Create and Operate Cloud Databases
                   </li>
                   <li className="list-disc p-2 ">
                     Authentication and Authorization
