@@ -19,9 +19,9 @@ export default function RootLayout({
     <>
       <html lang="en">
         <body>
+          <Script src="./scripts/theme.js" />
           <Header />
           {children}
-          <Script src="./scripts/theme.js" />
           <Footer />
         </body>
       </html>

@@ -37,11 +37,11 @@ const ProjectsShowcase = () => {
           ]}
         />
         <GridItem
-          description="Classic Minesweeper. Written with React, TypeScript and TailwindCSS. "
-          title="Minesweeper Game"
-          image="minesweeper.png"
-          linkApp="https://minesweeper-neon-rho.vercel.app"
-          linkCode="https://github.com/str4ng3love/minesweeper"
+          description="Speed typing game. Written with React, TypeScript and TailwindCSS. "
+          title="Speed Typing Game"
+          image="type_game.png"
+          linkApp="https://typing-checker-wine.vercel.app"
+          linkCode="https://github.com/str4ng3love/typing_checker"
           icons={[
             { icon: SiReact, title: "React" },
             { icon: SiTypescript, title: "Typescript" },
@@ -63,6 +63,21 @@ const ProjectsShowcase = () => {
             {
               icon: SiMongodb,
               title: "MongoDB",
+            },
+          ]}
+        />
+          <GridItem
+          description="Classic Minesweeper. Written with React, TypeScript and TailwindCSS. "
+          title="Minesweeper Game"
+          image="minesweeper.png"
+          linkApp="https://minesweeper-neon-rho.vercel.app"
+          linkCode="https://github.com/str4ng3love/minesweeper"
+          icons={[
+            { icon: SiReact, title: "React" },
+            { icon: SiTypescript, title: "Typescript" },
+            {
+              icon: SiTailwindcss,
+              title: "Tailwind CSS",
             },
           ]}
         />
