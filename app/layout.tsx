@@ -1,6 +1,8 @@
 import "./globals.css";
 import Script from "next/script";
 import { Metadata } from "next";
+import Header from "./components/dynamic/Header";
+import Footer from "./components/static/Footer";
 
 export const metadata: Metadata = {
   title: "Michał Paprocki | Web Developer",
@@ -16,8 +18,12 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body>{children}</body>
-        <Script src="./scripts/theme.js" />
+        <body>
+          <Header />
+          {children}
+          <Script src="./scripts/theme.js" />
+          <Footer />
+        </body>
       </html>
     </>
   );

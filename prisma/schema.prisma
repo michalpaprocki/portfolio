@@ -16,3 +16,9 @@ model Message {
   message String
   @@unique([email])
 }
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  password String
+}
