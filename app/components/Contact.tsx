@@ -66,7 +66,7 @@ const Contact = () => {
             </a>
 
             <span
-              className=" hover:drop-shadow-basic-light hover:-translate-y-1 active:text-violet transition-transform "
+              className=" hover:drop-shadow-basic-violet hover:dark:drop-shadow-basic-violet hover:text-violet hover:-translate-y-1 active:text-violet transition-transform "
               onClick={(e) => {
                 navigator.clipboard.writeText("michalpaprocki@proton.me");
                 setNotify({ show: true, message: "Email adress copied" });

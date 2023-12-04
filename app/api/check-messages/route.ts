@@ -5,7 +5,6 @@ import { NextResponse } from "next/server";
 async function handler(req: Request) {
     if (req.method === "POST") {
         const body = await req.json()
-        console.log(body)
         if (!body || typeof body.name !== "string" || typeof body.password !== "string") {
             return NextResponse.json({ error: "Bad request" }, { status: 400 })
         }

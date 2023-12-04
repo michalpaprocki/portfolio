@@ -63,7 +63,8 @@ module.exports = {
         "blob2-light": "2.2rem 4rem 1rem var(--dark)",
         "blob1-dark": "-2.2rem 4rem 1rem var(--violet-dark)",
         "blob2-dark": "2.2rem 4rem 1rem var(--violet-dark)",
-        "basic-light":"0rem 0rem 1rem var(--light)"
+        "basic-light":"0rem 0rem 1rem var(--light)",
+        "basic-violet":"0rem 0rem 1rem var(--violet)"
       },
       keyframes: {
         translateLeft: {
