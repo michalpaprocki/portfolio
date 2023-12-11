@@ -24,9 +24,11 @@ import {
   SiSvelte,
   SiElectron,
   SiHeadlessui,
-  SiVite
+  SiVite,
+  SiPostgresql,
+  SiDocker
 } from "react-icons/si";
-import { FaArrowCircleRight } from 'react-icons/fa'
+import { FaArrowCircleRight, FaPhoenixFramework } from 'react-icons/fa'
 const About = () => {
   const [showIcons, setShowIcons] = useState(false);
   const [showText, setShowText] = useState(false);
@@ -225,23 +227,6 @@ const About = () => {
                 />
               </div>
               <h5 className="p-1 text-center text-lg font-bold mt-12">
-                Currently Learning :
-              </h5>
-              <div className="flex justify-evenly gap-1 md:gap-8 sm:gap-4 pb-4 pt-8 px-2 md:p-8  flex-wrap">
-                <Icon
-                  Icon={SiPython}
-                  title="Python"
-                  darkHoverTextColor="dark:hover:text-dark-color"
-                  DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
-                />
-                <Icon
-                  Icon={SiFlask}
-                  title="Flask"
-                  darkHoverTextColor="dark:hover:text-dark-color"
-                  DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
-                />
-              </div>
-              <h5 className="p-1 text-center text-lg font-bold mt-12">
                 On My Radar :
               </h5>
               <div className="flex justify-evenly gap-1 md:gap-8 sm:gap-4 pb-4 pt-8 px-2 md:p-8  flex-wrap">
@@ -278,8 +263,38 @@ const About = () => {
                   DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
                 />
                 <Icon
+                  Icon={SiPython}
+                  title="Python"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                  DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+                />
+                <Icon
+                  Icon={SiFlask}
+                  title="Flask"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                  DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+                />
+                <Icon
                   Icon={SiElixir}
                   title="Elixir"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                  DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+                />
+                <Icon
+                  Icon={FaPhoenixFramework}
+                  title="Phoenix"
+                  darkHoverTextColor="dark:hover:text-svelte-logo"
+                  DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+                />
+                <Icon
+                  Icon={SiPostgresql}
+                  title="POSTGRESQL"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                  DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
+                />
+                <Icon
+                  Icon={SiDocker}
+                  title="Docker"
                   darkHoverTextColor="dark:hover:text-dark-color"
                   DarkHoverAfterTextColor="dark:hover:after:text-dark-color"
                 />
@@ -292,10 +307,10 @@ const About = () => {
           </h4>
           <div className="p-8 sm:w-[80%] w-full text-base">
             <ul className="flex flex-col list-disc items-start leading-loose">
-              <li className="">Music - bass guitar amateur, fan of all things syncopated. Ranging from jazz, funk and disco to hip-hop and drum n bass.</li>
+              <li className="">Music - bass guitar amateur, fan of all things syncopated.</li>
               <li className="">Part of a group focused on coaching and training new players of Eve Online (video game).</li>
               <li className="">Stategy games.</li>
-              <li className="">History, Etymology and Transhumanism.</li>
+              <li className="">History, Science and Fantasy in fiction.</li>
             </ul>
           </div>
         </div>
