@@ -45,6 +45,8 @@ const GridItem = ({
 
           <div className="flex md:justify-evenly justify-between md:p-4 p-2 absolute left-0  bottom-0 w-full ">
             <Tile
+              ariaLabel="open live version of the project"
+              title="App"
               text="App"
               link={linkApp}
               target="_blank"
@@ -55,6 +57,8 @@ const GridItem = ({
               darkHoverTextColor="dark:hover:text-dark-color"
             />
             <Tile
+              ariaLabel="open app's repository"
+              title="Repo"
               text="<Code />"
               link={linkCode}
               target="_blank"

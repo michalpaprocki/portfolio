@@ -26,14 +26,14 @@ import {
   SiHeadlessui,
   SiVite,
   SiPostgresql,
-  SiDocker
+  SiDocker,
 } from "react-icons/si";
-import { FaArrowCircleRight, FaPhoenixFramework } from 'react-icons/fa'
+import { FaArrowCircleRight, FaPhoenixFramework } from "react-icons/fa";
 const About = () => {
   const [showIcons, setShowIcons] = useState(false);
   const [showText, setShowText] = useState(false);
-  const [expand1, setExpand1] = useState(false)
-  const [expand2, setExpand2] = useState(false)
+  const [expand1, setExpand1] = useState(false);
+  const [expand2, setExpand2] = useState(false);
   return (
     <section
       id="about"
@@ -44,19 +44,27 @@ const About = () => {
           className="rounded-md overflow-clip flex flex-col items-center dark:bg-light-color dark:shadow-link-dark-fat bg-dark-color shadow-link-light-fat p-4 sm:p-8 w-full lg:w-[70%] md:w-[80%] sm:w-[90%] ring-inset ring-2 ring-violet-a40
         "
         >
-          <h3 onClick={() => expand1 ? setExpand1(false) : setExpand1(true)} className="hover:bg-violet hover:text-light-color transition-all text-3xl font-bold first-letter:capitalize text-center p-4 m-4 sm:mt-12 flex gap-2 items-center">
-            <span className={`${expand1 ? "rotate-90 animate-none" : "rotate-0 animate-pulse"} transition-all `}><FaArrowCircleRight /></span> Skills
+          <h3
+            onClick={() => (expand1 ? setExpand1(false) : setExpand1(true))}
+            className="hover:bg-violet hover:text-light-color transition-all text-3xl font-bold first-letter:capitalize text-center p-4 m-4 sm:mt-12 flex gap-2 items-center"
+          >
+            <span
+              className={`${
+                expand1 ? "rotate-90 animate-none" : "rotate-0 animate-pulse"
+              } transition-all `}
+            >
+              <FaArrowCircleRight />
+            </span>{" "}
+            Skills
           </h3>
           <p className="p-8 sm:w-[80%] w-full text-center text-lg  font-semibold">
-            While working on personal projects, I learned how to design,
-            build and ship front-end and fullstack web apps. Solid fundamentals,
-            fast learning and perseverance allow me to tackle any project.
+            While working on personal projects, I learned how to design, build
+            and ship front-end and fullstack web apps. Solid fundamentals, fast
+            learning and perseverance allow me to tackle any project.
           </p>
 
-          {expand1 ?
+          {expand1 ? (
             <div className="flex flex-col items-center">
-
-
               {showText ? (
                 <>
                   <p className="sm:w-[80%] w-full text-center text-lg p-8">
@@ -69,7 +77,9 @@ const About = () => {
                       </li>
                       <li className="list-disc p-2 ">Promises</li>
                       <li className="list-disc p-2 ">Server Side Rendering</li>
-                      <li className="list-disc p-2 ">Create and Consume APIs</li>
+                      <li className="list-disc p-2 ">
+                        Create and Consume APIs
+                      </li>
                     </ul>
                     <ul className="flex flex-col items-start  sm:p-8 list-inside">
                       <li className="list-disc p-2 ">
@@ -82,17 +92,19 @@ const About = () => {
                     </ul>
                   </div>
                   <p className="sm:w-[80%] w-full text-center text-lg p-8 font-semibold">
-                    With ever changing industry landscape, I&apos;ve grown to understand and embrace the need to stay in the know to keep up with it&apos;s pace.
+                    With ever changing industry landscape, I&apos;ve grown to
+                    understand and embrace the need to stay in the know to keep
+                    up with it&apos;s pace.
                   </p>
-                  <p className="sm:w-[80%] w-full text-center text-lg p-8">
-
-                  </p>
+                  <p className="sm:w-[80%] w-full text-center text-lg p-8"></p>
                 </>
               ) : (
                 <></>
               )}
               <div className="p-8">
                 <Tile
+                  ariaLabel="show more"
+                  title="show more"
                   fn={(e) => {
                     setShowText(!showText);
                   }}
@@ -215,6 +227,8 @@ const About = () => {
               </div>
               <div className="p-8">
                 <Tile
+                  ariaLabel="show more"
+                  title="show more"
                   fn={() => {
                     setShowIcons(!showIcons);
                   }}
@@ -300,15 +314,22 @@ const About = () => {
                 />
               </div>
             </div>
-            : <></>}
+          ) : (
+            <></>
+          )}
 
           <h4 className="text-xl font-semibold first-letter:capitalize text-center p-4 m-4 sm:mt-12 flex gap-2 items-center">
             Interests & Hobbies
           </h4>
           <div className="p-8 sm:w-[80%] w-full text-base">
             <ul className="flex flex-col list-disc items-start leading-loose">
-              <li className="">Music - bass guitar amateur, fan of all things syncopated.</li>
-              <li className="">Part of a group focused on coaching and training new players of Eve Online (video game).</li>
+              <li className="">
+                Music - bass guitar amateur, fan of all things syncopated.
+              </li>
+              <li className="">
+                Part of a group focused on coaching and training new players of
+                Eve Online (video game).
+              </li>
               <li className="">Stategy games.</li>
               <li className="">History, Science and Fantasy in fiction.</li>
             </ul>

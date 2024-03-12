@@ -13,11 +13,11 @@ const Burger = () => {
     if (isOpen) {
       setAnimation("animate-fadeOut01s");
       await new Promise((r) => setTimeout(r, ms));
-      setOpen(!isOpen);
+      setOpen(false);
     } else {
       setAnimation("animate-fadeIn01s");
       await new Promise((r) => setTimeout(r, ms));
-      setOpen(!isOpen);
+      setOpen(true);
     }
   };
   return (
@@ -25,6 +25,8 @@ const Burger = () => {
       <ul className="md:flex hidden">
         <li className="p-1 md:h-auto">
           <Tile
+            ariaLabel="got to projects"
+            title="Projects"
             text="Projects"
             fn={(e) => ScrollTo("projects")}
             darkHoverTextColor="dark:hover:text-dark-color"
@@ -33,6 +35,8 @@ const Burger = () => {
         </li>
         <li className="p-1 md:h-auto">
           <Tile
+            ariaLabel="go to about page"
+            title="About"
             text="About"
             fn={(e) => ScrollTo("about")}
             darkHoverTextColor="dark:hover:text-dark-color"
@@ -41,6 +45,8 @@ const Burger = () => {
         </li>
         <li className="p-1 md:h-auto">
           <Tile
+            ariaLabel="go to contact page"
+            title="contact"
             text="Contact"
             fn={(e) => ScrollTo("contact")}
             darkHoverTextColor="dark:hover:text-dark-color"
@@ -67,43 +73,27 @@ const Burger = () => {
           </a>
         </div>
       </div>
-      <div
-        onClick={(e) => {
-          animate(100);
-          if (!isOpen) {
-            e.currentTarget.children[0].classList.remove(
-              "animate-normalize_upper_burger"
-            );
-            e.currentTarget.children[0].classList.add("animate-burger_up");
-            e.currentTarget.children[1].classList.remove(
-              "animate-normalize_mid_burger"
-            );
-            e.currentTarget.children[1].classList.add("animate-burger_mid");
-            e.currentTarget.children[2].classList.remove(
-              "animate-normalize_lower_burger"
-            );
-            e.currentTarget.children[2].classList.add("animate-burger_down");
-          } else {
-            e.currentTarget.children[0].classList.remove("animate-burger_up");
-            e.currentTarget.children[0].classList.add(
-              "animate-normalize_upper_burger"
-            );
-            e.currentTarget.children[1].classList.remove("animate-burger_mid");
-            e.currentTarget.children[1].classList.add(
-              "animate-normalize_mid_burger"
-            );
-            e.currentTarget.children[2].classList.remove("animate-burger_down");
-            e.currentTarget.children[2].classList.add(
-              "animate-normalize_lower_burger"
-            );
-          }
-        }}
-        className="md:hidden cursor-pointer"
+      <button
+        aria-label="open or close burger menu"
+        onClick={(e) => animate(200)}
+        className="md:hidden cursor-pointer flex flex-col gap-1 hover:outline-1 focus:outline-dark-color focus:dark:outline-light-color"
       >
-        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block"></span>
-        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block "></span>
-        <span className="border-b-4 border-solid border-[var(--dark)] dark:border-[var(--light)] h-[1rem] w-[3rem] block "></span>
-      </div>
+        <span
+          className={`${
+            isOpen ? "rotate-45 translate-y-3" : "rotate-0"
+          } bg-dark-color dark:bg-light-color h-2 w-8 transition`}
+        ></span>
+        <span
+          className={`${
+            isOpen ? "opacity-0" : "opacity-100"
+          } bg-dark-color dark:bg-light-color h-2 w-8 transition`}
+        ></span>
+        <span
+          className={`${
+            isOpen ? "-rotate-45 -translate-y-3" : "rotate-0"
+          } bg-dark-color dark:bg-light-color h-2 w-8 transition`}
+        ></span>
+      </button>
       {isOpen ? (
         <>
           <div
@@ -115,6 +105,8 @@ const Burger = () => {
               </li>
               <li>
                 <Tile
+                  ariaLabel="go to top of the page"
+                  title="go to top"
                   text="MP"
                   fn={(e) => ScrollTo("navbar")}
                   hoverBgColor="hover:bg-violet"
@@ -125,6 +117,8 @@ const Burger = () => {
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile
+                  ariaLabel="go to projects page"
+                  title="Projects"
                   text="Projects"
                   fn={(e) => {
                     ScrollTo("projects");
@@ -137,6 +131,8 @@ const Burger = () => {
               </li>
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile
+                  ariaLabel="go to about page"
+                  title="About"
                   text="About"
                   fn={(e) => ScrollTo("about")}
                   hoverBgColor="hover:bg-violet"
@@ -148,6 +144,8 @@ const Burger = () => {
               <li className=" dark:bg-dark-color bg-light-color">
                 <Tile
                   text="Contact"
+                  ariaLabel="go to contact page"
+                  title="Contact"
                   fn={(e) => ScrollTo("contact")}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
