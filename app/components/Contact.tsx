@@ -7,6 +7,7 @@ import Tile from "./dynamic/Tile";
 import { SiGithub } from "react-icons/si";
 import Icon from "./static/Icon";
 import Link from "next/link";
+import ResumeDL from "./static/ResumeDL";
 const Contact = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -213,6 +214,9 @@ const Contact = () => {
                 DarkHoverAfterTextColor="dark:hover:after:text-light-color"
               />
             </Link>
+          </div>
+          <div className="flex p-4 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
+            <ResumeDL />
           </div>
         </div>
         <div

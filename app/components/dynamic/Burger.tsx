@@ -1,5 +1,4 @@
 "use client";
-import { BsFiletypePdf } from "react-icons/bs";
 import Tile from "./Tile";
 import DayAndNight from "./DayAndNight";
 import { useState } from "react";
@@ -62,19 +61,7 @@ const Burger = () => {
           <DayAndNight />
         </li>
       </ul>
-      <div className="flex justify-center p-4 whitespace-pre-wrap items-center text-xl font-semibold">
-        <div className="bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset">
-          <a
-            href="/files/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center p-4 gap-4 hover:text-violet transition-all text-sm"
-          >
-            <p className="">Resume</p>
-            <BsFiletypePdf size={"2em"} />
-          </a>
-        </div>
-      </div>
+      <div className="flex justify-center p-4 whitespace-pre-wrap items-center text-xl font-semibold"></div>
       <button
         aria-label="open or close burger menu"
         onClick={(e) => animate(200)}
