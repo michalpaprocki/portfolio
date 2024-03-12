@@ -7,12 +7,32 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
+  SiNextdotjs,
 } from "react-icons/si";
 
 const ProjectsShowcase = () => {
   return (
     <section id="projects" className="flex justify-center pb-8 ">
       <div className="md:p-16 p-8 mt-16 grid md:gap-8 gap-4 xl:grid-cols-2 grid-cols-1 items-center md:w-[80%] w-full">
+        <GridItem
+          description="Create an account and post events or market sell orders. Like and comment on posted items."
+          title="Eventzor"
+          image="eventzor.png"
+          linkApp="https://eventzor.vercel.app"
+          linkCode="https://github.com/str4ng3love/Eventzor"
+          icons={[
+            { icon: SiNextdotjs, title: "Next.JS" },
+            { icon: SiTypescript, title: "Typescript" },
+            {
+              icon: SiTailwindcss,
+              title: "Tailwind CSS",
+            },
+            {
+              icon: SiMongodb,
+              title: "MongoDB",
+            },
+          ]}
+        />
         <GridItem
           description="Simple Pokemon themed memory game made with React, TypeScript and TailwindCSS. "
           title="Memory Game"

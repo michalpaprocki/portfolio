@@ -13,8 +13,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-grid":
           "linear-gradient(90deg , var(--violet) 1%, transparent 5%), linear-gradient(270deg, var(--violet) 1%, transparent 5%), linear-gradient(180deg , var(--violet) 1%, transparent 5%), linear-gradient(0deg, var(--violet) 1%, transparent 5%)",
-          "gradient-grid-dark":
-          "linear-gradient(90deg , var(--violet) 1%, transparent 5%), linear-gradient(270deg, var(--violet) 1%, transparent 5%), linear-gradient(180deg , var(--violet) 1%, transparent 5%), linear-gradient(0deg, var(--violet) 1%, transparent 5%)", 
+        "gradient-grid-dark":
+          "linear-gradient(90deg , var(--violet) 1%, transparent 5%), linear-gradient(270deg, var(--violet) 1%, transparent 5%), linear-gradient(180deg , var(--violet) 1%, transparent 5%), linear-gradient(0deg, var(--violet) 1%, transparent 5%)",
         "gradient-tri-violet":
           "conic-gradient(from 330deg at 50% 60%, var(--violet-dark) 60deg, transparent 60deg) ,conic-gradient(from 150deg at 50% 30%, var(--violet) 60deg, transparent 60deg)",
         "gradient-tri-dark":
@@ -36,19 +36,19 @@ module.exports = {
         "dark-a40": "var(--dark-a80)",
         "light-color": "var(--light)",
         "light-a80": "var(--light-a80)",
-        "violet": "var(--violet)",
+        violet: "var(--violet)",
         "violet-dark": "var(--violet-dark)",
         "violet-a40": "var(--violet-a40)",
         "violet-dark-a40": "var(--violet-dark-a40)",
         "violet-a80": "var(--violet-a80)",
         "violet-dark-a80": "var(--violet-dark-a80)",
         "react-logo": "#61DBFB",
-        "node-logo":  "#679267",
+        "node-logo": "#679267",
         "mongo-logo": "#4DB33D",
         "git-logo": "#F1502F",
-        "render-logo":"#5EDCB6",
+        "render-logo": "#5EDCB6",
         "svelte-logo": "#EF4823",
-        "electron-logo": "#89eef3"
+        "electron-logo": "#89eef3",
       },
       boxShadow: {
         "link-light-fat": "0rem 0rem 2rem 2px var(--dark)",
@@ -63,17 +63,17 @@ module.exports = {
         "blob2-light": "2.2rem 4rem 1rem var(--dark)",
         "blob1-dark": "-2.2rem 4rem 1rem var(--violet-dark)",
         "blob2-dark": "2.2rem 4rem 1rem var(--violet-dark)",
-        "basic-light":"0rem 0rem 1rem var(--light)",
-        "basic-violet":"0rem 0rem 1rem var(--violet)"
+        "basic-light": "0rem 0rem 1rem var(--light)",
+        "basic-violet": "0rem 0rem 1rem var(--violet)",
       },
       keyframes: {
         translateLeft: {
-          "0%":{
-            transform: "translateX(0%)"
+          "0%": {
+            transform: "translateX(0%)",
           },
-          "100%":{
-            transform: "translateX(-100%)"
-          }
+          "100%": {
+            transform: "translateX(-100%)",
+          },
         },
         bloberize1: {
           "11%, 89%": {
@@ -120,7 +120,7 @@ module.exports = {
         },
         bloberize3: {
           "0%, 100%": {
-            transform: "rotate(0deg)"
+            transform: "rotate(0deg)",
           },
           "22%, 78%": {
             borderRadius: "46% 54% 63% 37% / 46% 68% 32% 54%",
@@ -129,16 +129,15 @@ module.exports = {
           },
           "33%, 62%": {
             borderRadius: "63% 37% 73% 27% / 44% 49% 31% 56%",
-            transform: "rotate(22deg)"
+            transform: "rotate(22deg)",
           },
 
           "51%": {
             borderRadius: "33% 67% 37% 63% / 65% 46% 54% 35%",
-            transform: "rotate(31deg)"
+            transform: "rotate(31deg)",
           },
           "40%": {
             transform: "scale(1.2) rotate(44deg)",
-            
           },
         },
         gridMove: {
@@ -146,13 +145,13 @@ module.exports = {
             backgroundPosition: "100% 0%",
           },
           "25%": {
-            backgroundPosition: "0% 100%"
+            backgroundPosition: "0% 100%",
           },
           "50%": {
-            backgroundPosition: "-100% 0%"
+            backgroundPosition: "-100% 0%",
           },
-          "75%":{
-            backgroundPosition: "0% -100%"
+          "75%": {
+            backgroundPosition: "0% -100%",
           },
         },
         slideIn: {
@@ -303,13 +302,13 @@ module.exports = {
               "0px 0px 4px var(--violet), 0px 0px 10px var(--violet), 0px 0px 18px var(--violet), 0px 0px 38px var(--violet), 0px 0px 76px var(--violet), 0px 0px 80px var(--violet), 0px 0px 90px var(--violet), 0px 0px 100px var(--violet)  ",
           },
         },
-        bump:{
-          "0%, 100%":{
-            transform: "translateY(0rem)"
+        bump: {
+          "0%, 100%": {
+            transform: "translateY(0rem)",
           },
-          "50%":{
-            transform: "translateY(-1rem)"
-          }
+          "50%": {
+            transform: "translateY(-1rem)",
+          },
         },
         heartPulse: {
           "0%, 15%, 30%, 100%": {
@@ -348,12 +347,23 @@ module.exports = {
         fadeIn4s: "fadeIn ease-in 1s 4s forwards",
         fadeIn5s: "fadeIn ease-in 1s 5s forwards",
         fadeOut01s: "fadeOut ease-out 0.1s forwards",
-        fadeInOut: "fadeIn ease-out 0.5s forwards, fadeOut ease-in 0.5s 1.5s forwards",
-        blobAround1: "fadeIn ease-in 1s 4s forwards, bloberize1 ease-in-out 90s infinite",
-        blobAround2: "slideIn2 ease-out 3s 2s forwards,  bloberize2 ease-in-out 30s infinite",
-        blobAround3: "fadeIn ease-in 1s 5s forwards, bloberize3 ease-in-out 35s infinite",
+        fadeInOut:
+          "fadeIn ease-out 0.5s forwards, fadeOut ease-in 0.5s 1.5s forwards",
+        blobAround1:
+          "fadeIn ease-in 1s 4s forwards, bloberize1 ease-in-out 90s infinite",
+        blobAround2:
+          "slideIn2 ease-out 3s 2s forwards,  bloberize2 ease-in-out 30s infinite",
+        blobAround3:
+          "fadeIn ease-in 1s 5s forwards, bloberize3 ease-in-out 35s infinite",
         bump: "bump cubic-bezier(.94,.03,.11,1.01) 1s forwards",
-        translateLeft: "translateLeft linear 20s infinite"
+        translateLeft: "translateLeft linear 20s infinite",
+      },
+      minHeight: {
+        reduced: ["calc(100vh - 10rem)", "calc(100dvh - 10rem)"],
+      },
+      height: {
+        footer: "10rem",
+        header: "5rem",
       },
     },
   },

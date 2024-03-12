@@ -8,15 +8,18 @@ import ScrollTo from "@/helper/ScrollTo";
 const Burger = () => {
   const [isOpen, setOpen] = useState(false);
   const [animation, setAnimation] = useState("");
-
   const animate = async (ms: number) => {
     if (isOpen) {
       setAnimation("animate-fadeOut01s");
       await new Promise((r) => setTimeout(r, ms));
+      document.body.classList.remove("overflow-y-hidden");
+
       setOpen(false);
     } else {
       setAnimation("animate-fadeIn01s");
       await new Promise((r) => setTimeout(r, ms));
+      document.body.classList.add("overflow-y-hidden");
+
       setOpen(true);
     }
   };
@@ -28,7 +31,7 @@ const Burger = () => {
             ariaLabel="got to projects"
             title="Projects"
             text="Projects"
-            fn={(e) => ScrollTo("projects")}
+            link="/projects"
             darkHoverTextColor="dark:hover:text-dark-color"
             cursor="cursor-pointer"
           />
@@ -67,8 +70,7 @@ const Burger = () => {
             rel="noopener noreferrer"
             className="flex items-center p-4 gap-4 hover:text-violet transition-all text-sm"
           >
-            <p className="hidden lg:block">Download my resume</p>
-            <p className="block lg:hidden">Resume</p>
+            <p className="">Resume</p>
             <BsFiletypePdf size={"2em"} />
           </a>
         </div>
@@ -76,22 +78,22 @@ const Burger = () => {
       <button
         aria-label="open or close burger menu"
         onClick={(e) => animate(200)}
-        className="md:hidden cursor-pointer flex flex-col gap-1 hover:outline-1 focus:outline-dark-color focus:dark:outline-light-color"
+        className="md:hidden z-10 cursor-pointer flex flex-col gap-1 hover:outline-1 focus:outline-dark-color focus:dark:outline-light-color"
       >
         <span
           className={`${
-            isOpen ? "rotate-45 translate-y-3" : "rotate-0"
-          } bg-dark-color dark:bg-light-color h-2 w-8 transition`}
+            isOpen ? "rotate-45 translate-y-2" : "rotate-0"
+          } bg-dark-color dark:bg-light-color h-1 w-8 transition`}
         ></span>
         <span
           className={`${
             isOpen ? "opacity-0" : "opacity-100"
-          } bg-dark-color dark:bg-light-color h-2 w-8 transition`}
+          } bg-dark-color dark:bg-light-color h-1 w-8 transition`}
         ></span>
         <span
           className={`${
-            isOpen ? "-rotate-45 -translate-y-3" : "rotate-0"
-          } bg-dark-color dark:bg-light-color h-2 w-8 transition`}
+            isOpen ? "-rotate-45 -translate-y-2" : "rotate-0"
+          } bg-dark-color dark:bg-light-color h-1 w-8 transition`}
         ></span>
       </button>
       {isOpen ? (
@@ -99,7 +101,7 @@ const Burger = () => {
           <div
             className={`md:hidden opacity-0 absolute top-0 translate-y-[var(--headerH)] w-full backdrop-blur-sm bg-dark-a80 dark:bg-violet-a80 ${animation}`}
           >
-            <ul className=" min-h-[calc(100dvh-var(--headerH))] flex flex-col items-center justify-evenly">
+            <ul className=" min-h-screen flex flex-col items-center justify-evenly">
               <li className=" dark:bg-dark-color bg-light-color">
                 <DayAndNight />
               </li>
@@ -120,9 +122,7 @@ const Burger = () => {
                   ariaLabel="go to projects page"
                   title="Projects"
                   text="Projects"
-                  fn={(e) => {
-                    ScrollTo("projects");
-                  }}
+                  link="/projects"
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"
                   darkHoverTextColor="dark:hover:text-dark-color"

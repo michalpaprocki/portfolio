@@ -44,7 +44,8 @@ const About = () => {
           className="rounded-md overflow-clip flex flex-col items-center dark:bg-light-color dark:shadow-link-dark-fat bg-dark-color shadow-link-light-fat p-4 sm:p-8 w-full lg:w-[70%] md:w-[80%] sm:w-[90%] ring-inset ring-2 ring-violet-a40
         "
         >
-          <h3
+          <button
+            aria-label="read more"
             onClick={() => (expand1 ? setExpand1(false) : setExpand1(true))}
             className="hover:bg-violet hover:text-light-color transition-all text-3xl font-bold first-letter:capitalize text-center p-4 m-4 sm:mt-12 flex gap-2 items-center"
           >
@@ -56,7 +57,7 @@ const About = () => {
               <FaArrowCircleRight />
             </span>{" "}
             Skills
-          </h3>
+          </button>
           <p className="p-8 sm:w-[80%] w-full text-center text-lg  font-semibold">
             While working on personal projects, I learned how to design, build
             and ship front-end and fullstack web apps. Solid fundamentals, fast
@@ -318,9 +319,9 @@ const About = () => {
             <></>
           )}
 
-          <h4 className="text-xl font-semibold first-letter:capitalize text-center p-4 m-4 sm:mt-12 flex gap-2 items-center">
+          <h2 className="text-xl font-semibold first-letter:capitalize text-center p-4 m-4 sm:mt-12 flex gap-2 items-center">
             Interests & Hobbies
-          </h4>
+          </h2>
           <div className="p-8 sm:w-[80%] w-full text-base">
             <ul className="flex flex-col list-disc items-start leading-loose">
               <li className="">

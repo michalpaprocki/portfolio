@@ -201,7 +201,11 @@ const Contact = () => {
             ... or check out my GitHub profile.
           </h2>
           <div className="flex p-4 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
-            <Link href="https://github.com/str4ng3love" target="_blank">
+            <Link
+              aria-label="go to github profile"
+              href="https://github.com/str4ng3love"
+              target="_blank"
+            >
               <Icon
                 Icon={SiGithub}
                 title="GitHub"

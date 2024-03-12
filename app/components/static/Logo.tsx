@@ -1,25 +1,32 @@
 "use client";
+
+import Link from "next/link";
+
 interface Props {
   text?: string;
   fn?: (e: React.MouseEvent) => void;
   ariaLabel: string;
+  href: string | null;
 }
 
-const Logo = ({ text, fn, ariaLabel }: Props) => {
+const Logo = ({ text, fn, ariaLabel, href }: Props) => {
   return (
     <>
       {fn ? (
         <button
           aria-label={ariaLabel}
           onClick={(e) => fn(e)}
-          className="text-4xl cursor-pointer overflow-clip select-none font-black p-1 h-12 w-[10.5rem] flex items-center justify-center whitespace-pre-wrap hover:bg-violet-dark hover:text-light-color dark:hover:bg-violet dark:hover:text-light-color hover:shadow-link-violet-dark dark:hover:shadow-violet after:h-20 after:w-1 after:bg-light-color after:shadow-link-dark-fat after:hover:animate-logo_slide after:invisible after:dark:bg-dark-color after:hover:visible after:dark:shadow-link-light-fat after:blur-sm transition-all"
+          className="text-2xl whitespace-nowrap cursor-pointer overflow-clip select-none font-black p-1 px-4 h-12 flex items-center justify-center  hover:bg-violet-dark hover:text-light-color dark:hover:bg-violet dark:hover:text-light-color hover:shadow-link-violet-dark dark:hover:shadow-violet transition"
         >
           {text}
         </button>
       ) : (
-        <span className="text-4xl justify-center overflow-clip select-none font-black p-1 h-12 w-[10.5rem] flex items-center whitespace-pre-wrap hover:bg-violet-dark hover:text-light-color dark:hover:bg-violet dark:hover:text-light-color hover:shadow-link-violet-dark dark:hover:shadow-violet after:h-20 after:w-1 after:bg-light-color after:shadow-link-dark-fat after:hover:animate-logo_slide after:invisible after:dark:bg-dark-color after:hover:visible after:dark:shadow-link-light-fat after:blur-sm transition-all">
+        <Link
+          href={href ? href : "#"}
+          className="text-2xl whitespace-nowrap justify-center overflow-clip select-none font-black p-1 px-4 h-12 flex items-center  hover:bg-violet-dark hover:text-light-color dark:hover:bg-violet dark:hover:text-light-color hover:shadow-link-violet-dark dark:hover:shadow-violet transition"
+        >
           {text}
-        </span>
+        </Link>
       )}
     </>
   );
