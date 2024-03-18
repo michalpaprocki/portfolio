@@ -2,7 +2,6 @@
 import Tile from "./Tile";
 import DayAndNight from "./DayAndNight";
 import { useState } from "react";
-import ScrollTo from "@/helper/ScrollTo";
 
 const Burger = () => {
   const [isOpen, setOpen] = useState(false);
@@ -51,26 +50,30 @@ const Burger = () => {
           <DayAndNight />
         </li>
       </ul>
-      <div className="flex justify-center p-4 whitespace-pre-wrap items-center text-xl font-semibold"></div>
+
       <button
         aria-label="open or close burger menu"
         onClick={(e) => animate(200)}
-        className="md:hidden z-10 cursor-pointer flex flex-col gap-1 hover:outline-1 focus:outline-dark-color focus:dark:outline-light-color"
+        className="md:hidden p-2 z-10 cursor-pointer flex flex-col gap-1 hover:outline-1 focus:outline-dark-color focus:dark:outline-light-color"
       >
         <span
           className={`${
-            isOpen ? "rotate-45 translate-y-2" : "rotate-0"
-          } bg-dark-color dark:bg-light-color h-1 w-8 transition`}
+            isOpen
+              ? "rotate-45 translate-y-2 bg-light-color"
+              : "rotate-0 bg-dark-color"
+          } dark:bg-light-color h-1 w-8 transition`}
         ></span>
         <span
           className={`${
-            isOpen ? "opacity-0" : "opacity-100"
-          } bg-dark-color dark:bg-light-color h-1 w-8 transition`}
+            isOpen ? "opacity-0 bg-light-color" : "opacity-100 bg-dark-color"
+          } dark:bg-light-color h-1 w-8 transition`}
         ></span>
         <span
           className={`${
-            isOpen ? "-rotate-45 -translate-y-2" : "rotate-0"
-          } bg-dark-color dark:bg-light-color h-1 w-8 transition`}
+            isOpen
+              ? "-rotate-45 -translate-y-2 bg-light-color"
+              : "rotate-0 bg-dark-color"
+          } dark:bg-light-color h-1 w-8 transition`}
         ></span>
       </button>
       {isOpen ? (

@@ -50,7 +50,7 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="relative pb-5 pt-12">
+    <section id="contact" className="relative pb-5 ">
       <div className="flex xl:flex-row xl:items-start items-center justify-center flex-col">
         <div className=" mx-8">
           <h2 className="text-xl font-bold my-10 text-center">
@@ -197,15 +197,16 @@ const Contact = () => {
             )}
           </form>
         </div>
-        <div className=" mx-8 ">
+        <div className="mx-8">
           <h2 className="my-10 font-bold text-xl text-right xl:text-center">
             ... or check out my GitHub profile.
           </h2>
-          <div className="flex p-4 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
+          <div className="group bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset transition">
             <Link
               aria-label="go to github profile"
               href="https://github.com/str4ng3love"
               target="_blank"
+              className="flex justify-center flex-col items-center p-4"
             >
               <Icon
                 Icon={SiGithub}
@@ -213,6 +214,9 @@ const Contact = () => {
                 darkHoverTextColor="dark:hover:text-light-color"
                 DarkHoverAfterTextColor="dark:hover:after:text-light-color"
               />
+              <span className="group-hover:text-violet transition">
+                https://github.com/str4ng3love
+              </span>
             </Link>
           </div>
           <div className="flex p-4 mt-8 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
