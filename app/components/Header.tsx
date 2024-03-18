@@ -1,5 +1,5 @@
-import Logo from "../static/Logo";
-import Burger from "./Burger";
+import Logo from "./static/Logo";
+import Burger from "./dynamic/Burger";
 const Header = () => {
   return (
     <nav

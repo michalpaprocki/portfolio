@@ -50,7 +50,7 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="relative pt-[var(--headerH)] pb-5">
+    <section id="contact" className="relative pb-5 pt-12">
       <div className="flex xl:flex-row xl:items-start items-center justify-center flex-col">
         <div className=" mx-8">
           <h2 className="text-xl font-bold my-10 text-center">
@@ -215,7 +215,7 @@ const Contact = () => {
               />
             </Link>
           </div>
-          <div className="flex p-4 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
+          <div className="flex p-4 mt-8 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
             <ResumeDL />
           </div>
         </div>

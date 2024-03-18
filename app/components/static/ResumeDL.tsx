@@ -3,7 +3,7 @@ import { BsFiletypePdf } from "react-icons/bs";
 
 const ResumeDL = () => {
   return (
-    <div className="bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset">
+    <div className="bg-black rounded-md text-light-color shadow-md shadow-dark-color ring-2 ring-violet dark:ring-violet-a40 dark:ring-2 dark:ring-inset">
       <Link
         aria-label="go to resume"
         href="/files/resume.pdf"
