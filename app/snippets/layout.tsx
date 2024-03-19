@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import Path from "../components/Path";
+
+export const metadata: Metadata = {
+  title: "Michał Paprocki",
+  keywords: ["nextjs", "react", "web development", "blog"],
+  description: "Personal website of Michał Paprocki - web developer.",
+};
 
 export default function RootLayout({
   children,
@@ -7,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <section className="flex min-h-reduced flex-col">
-      <div className="relative pt-20">
+      <div className="pt-20">
         <Path />
       </div>
       {children}

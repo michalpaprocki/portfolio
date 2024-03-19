@@ -23,7 +23,7 @@ const Burger = () => {
   };
   return (
     <>
-      <ul className="md:flex hidden">
+      <ul className="hidden md:flex">
         <li className="p-1 md:h-auto">
           <Tile
             ariaLabel="got to projects"
@@ -44,6 +44,16 @@ const Burger = () => {
             cursor="cursor-pointer"
           />
         </li>
+        <li className="p-1 md:h-auto">
+          <Tile
+            ariaLabel="go to snippets page"
+            title="Snippets"
+            text="Snippets"
+            link="/snippets"
+            darkHoverTextColor="dark:hover:text-dark-color"
+            cursor="cursor-pointer"
+          />
+        </li>
       </ul>
       <ul className="hidden md:block">
         <li className="p-1">
@@ -54,35 +64,35 @@ const Burger = () => {
       <button
         aria-label="open or close burger menu"
         onClick={(e) => animate(200)}
-        className="md:hidden p-2 z-10 cursor-pointer flex flex-col gap-1 hover:outline-1 focus:outline-dark-color focus:dark:outline-light-color"
+        className="z-10 flex cursor-pointer flex-col gap-1 p-2 hover:outline-1 focus:outline-dark-color focus:dark:outline-light-color md:hidden"
       >
         <span
           className={`${
             isOpen
-              ? "rotate-45 translate-y-2 bg-light-color"
+              ? "translate-y-2 rotate-45 bg-light-color"
               : "rotate-0 bg-dark-color"
-          } dark:bg-light-color h-1 w-8 transition`}
+          } h-1 w-8 transition dark:bg-light-color`}
         ></span>
         <span
           className={`${
-            isOpen ? "opacity-0 bg-light-color" : "opacity-100 bg-dark-color"
-          } dark:bg-light-color h-1 w-8 transition`}
+            isOpen ? "bg-light-color opacity-0" : "bg-dark-color opacity-100"
+          } h-1 w-8 transition dark:bg-light-color`}
         ></span>
         <span
           className={`${
             isOpen
-              ? "-rotate-45 -translate-y-2 bg-light-color"
+              ? "-translate-y-2 -rotate-45 bg-light-color"
               : "rotate-0 bg-dark-color"
-          } dark:bg-light-color h-1 w-8 transition`}
+          } h-1 w-8 transition dark:bg-light-color`}
         ></span>
       </button>
       {isOpen ? (
         <>
           <div
-            className={`md:hidden opacity-0 absolute top-0 w-full backdrop-blur-sm bg-dark-a80 dark:bg-violet-a80 ${animation}`}
+            className={`absolute top-0 w-full bg-dark-a80 opacity-0 backdrop-blur-sm dark:bg-violet-a80 md:hidden ${animation}`}
           >
-            <ul className=" min-h-screen flex flex-col items-center justify-evenly">
-              <li className=" dark:bg-dark-color bg-light-color">
+            <ul className=" flex min-h-screen flex-col items-center justify-evenly">
+              <li className=" bg-light-color dark:bg-dark-color">
                 <DayAndNight />
               </li>
               <li>
@@ -98,7 +108,7 @@ const Burger = () => {
                   cursor="cursor-pointer"
                 />
               </li>
-              <li className=" dark:bg-dark-color bg-light-color">
+              <li className=" bg-light-color dark:bg-dark-color">
                 <Tile
                   ariaLabel="go to projects page"
                   title="Projects"
@@ -111,12 +121,25 @@ const Burger = () => {
                   cursor="cursor-pointer"
                 />
               </li>
-              <li className=" dark:bg-dark-color bg-light-color">
+              <li className=" bg-light-color dark:bg-dark-color">
                 <Tile
                   ariaLabel="go to blog page"
                   title="blog"
                   text="blog"
                   link="/blog"
+                  fn={(e) => setOpen(false)}
+                  hoverBgColor="hover:bg-violet"
+                  hoverShadowColor="hover:shadow-link-violet"
+                  darkHoverTextColor="dark:hover:text-dark-color"
+                  cursor="cursor-pointer"
+                />
+              </li>
+              <li className=" bg-light-color dark:bg-dark-color">
+                <Tile
+                  ariaLabel="go to snippets page"
+                  title="Snippets"
+                  text="Snippets"
+                  link="/snippets"
                   fn={(e) => setOpen(false)}
                   hoverBgColor="hover:bg-violet"
                   hoverShadowColor="hover:shadow-link-violet"

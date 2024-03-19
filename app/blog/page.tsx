@@ -1,8 +1,10 @@
 const page = async () => {
   return (
-    <div className="p-8">
-      <h3 className="p-1 text-lg font-semibold">Mike's Blog</h3>
-      <div>no content yet</div>
+    <div className="flex flex-col items-center pt-8">
+      <div className="w-full md:w-[80%]">
+        <h2 className="text p-4 text-lg font-bold">Mike's Blog</h2>
+        <span>no content yet</span>
+      </div>
     </div>
   );
 };
