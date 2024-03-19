@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <section className="flex min-h-reduced flex-col">
-      <div className="pt-20">
+      <div className="relative pt-20">
         <Path />
       </div>
       {children}

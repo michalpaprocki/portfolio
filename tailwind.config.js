@@ -359,6 +359,10 @@ module.exports = {
         footer: "10rem",
         header: "5rem",
       },
+      width: {
+        "80p": "80%",
+        "60p": "60%",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

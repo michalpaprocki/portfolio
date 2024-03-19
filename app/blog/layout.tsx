@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Path from "../components/Path";
 
 export const metadata: Metadata = {
   title: "Michał Paprocki",
@@ -7,7 +8,14 @@ export const metadata: Metadata = {
 };
 
 const layout = async ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
+  return (
+    <section className="flex min-h-reduced flex-col">
+      <div className="pt-20">
+        <Path />
+      </div>
+      {children}
+    </section>
+  );
 };
 
 export default layout;
