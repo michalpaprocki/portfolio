@@ -6,8 +6,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="min-h-reduced">
-      <div className="flex  pt-20">
+    <section className="flex min-h-reduced flex-col">
+      <div className="pt-20">
         <Path />
       </div>
       {children}

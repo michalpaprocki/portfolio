@@ -13,7 +13,7 @@ const Path = () => {
   );
 
   return (
-    <div className="m-1 rounded-md bg-dark-color p-1 text-sm font-semibold text-light-color ring-2 ring-violet-a40 dark:bg-black/50">
+    <div className="m-1 flex rounded-md bg-dark-color p-1 text-sm font-semibold text-light-color ring-2 ring-violet-a40 dark:bg-black/50">
       {pathArray.map((p, i) => (
         <div key={i} className="">
           <span className="px-1" key={i}>
