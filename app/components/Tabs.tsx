@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Tile from "./dynamic/Tile";
 
 interface Props {
@@ -26,7 +26,11 @@ const Tabs = ({ tabs }: Props) => {
         ))}
       </div>
       <div>
-        {tabs.map((t, i) => (i === selected ? <> {t.element}</> : null))}
+        {tabs.map((t, i) =>
+          i === selected ? (
+            <React.Fragment key={i}> {t.element}</React.Fragment>
+          ) : null,
+        )}
       </div>
     </div>
   );
