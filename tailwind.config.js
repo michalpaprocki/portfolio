@@ -321,6 +321,30 @@ module.exports = {
             transform: "scale(1.3)",
           },
         },
+        pendulumFromTop: {
+          "0%, 100%": {
+            transform: "translateY(-50%)",
+          },
+          "50%": {
+            transform: "translateY(50%)",
+          },
+        },
+        pendulumFromCenter: {
+          "33%": {
+            transform: "translateY(50%)",
+          },
+          "0%, 100%": {
+            transform: "translateY(-50%)",
+          },
+        },
+        pendulumFromBottom: {
+          "0%, 100%": {
+            transform: "translateY(50%)",
+          },
+          "50%": {
+            transform: "translateY(-50%)",
+          },
+        },
       },
       animation: {
         slide: "slide 1s cubic-bezier(.98,.12,.12,.98) infinite",
@@ -351,6 +375,12 @@ module.exports = {
           "fadeIn ease-in 1s 3s forwards, bloberize3 ease-in-out 35s infinite",
         bump: "bump cubic-bezier(.94,.03,.11,1.01) 1s forwards",
         translateLeft: "translateLeft linear 20s infinite",
+        pendulumTop:
+          "pendulumFromTop 1s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite",
+        pendulumCenter:
+          "pendulumFromCenter 1.5s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite",
+        pendulumBottom:
+          "pendulumFromBottom 1s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite",
       },
       minHeight: {
         reduced: ["calc(100vh - 10rem)", "calc(100dvh - 10rem)"],

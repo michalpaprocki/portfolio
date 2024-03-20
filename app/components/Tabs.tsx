@@ -11,7 +11,7 @@ const Tabs = ({ tabs }: Props) => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex justify-center gap-4 py-4">
+      <div className="flex w-fit justify-center gap-4 self-center py-4">
         {tabs.map((t, i) => (
           <Tile
             key={i}

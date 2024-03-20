@@ -10,7 +10,7 @@ const Snippet = ({ code, language }: Props) => {
   return (
     <div className="flex animate-fadeIn01s flex-col items-center py-8 transition">
       <div className="relative w-[90%] text-light-color ring-2 ring-violet md:w-[70%] ">
-        <pre className="overflow-x-scroll bg-dark-color p-4 pt-8">
+        <pre className="overflow-x-scroll bg-dark-color p-4 pt-16">
           {code}
           <span className="absolute left-1 top-1">{language}</span>
           <button

@@ -11,6 +11,9 @@ const page = () => {
             href="/snippets/css/moving-grid"
           />
         </li>
+        <li>
+          <LinkSimple text="Spinners" href="/snippets/css/spinners" />
+        </li>
       </ul>
     </div>
   );
