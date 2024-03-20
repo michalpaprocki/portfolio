@@ -8,6 +8,7 @@ interface Props {
 }
 const Tabs = ({ tabs }: Props) => {
   const [selected, setSelected] = useState(0);
+
   return (
     <div className="flex flex-col">
       <div className="flex justify-center gap-4 py-4">
