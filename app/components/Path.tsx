@@ -7,7 +7,7 @@ const Path = () => {
   const pathArray = path.replace("/", "").split("/");
   const pathsSeparated = pathArray
     .map((_p, i) => pathArray.slice(0, pathArray.length - i))
-    .toReversed();
+    .reverse();
   const links = pathsSeparated.map((p, i) =>
     p.reduce((prev, current) => prev + "/" + current, "/").replace("/", ""),
   );
