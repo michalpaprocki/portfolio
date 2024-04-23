@@ -26,26 +26,6 @@ const Burger = () => {
       <ul className="hidden md:flex">
         <li className="p-1 md:h-auto">
           <Tile
-            ariaLabel="got to projects"
-            title="Projects"
-            text="Projects"
-            link="/projects"
-            darkHoverTextColor="dark:hover:text-dark-color"
-            cursor="cursor-pointer"
-          />
-        </li>
-        <li className="p-1 md:h-auto">
-          <Tile
-            ariaLabel="go to blog page"
-            title="Blog"
-            text="Blog"
-            link="/blog"
-            darkHoverTextColor="dark:hover:text-dark-color"
-            cursor="cursor-pointer"
-          />
-        </li>
-        <li className="p-1 md:h-auto">
-          <Tile
             ariaLabel="go to snippets page"
             title="Snippets"
             text="Snippets"
@@ -95,45 +75,7 @@ const Burger = () => {
               <li className=" bg-light-color dark:bg-dark-color">
                 <DayAndNight />
               </li>
-              <li>
-                <Tile
-                  ariaLabel="go to top of the page"
-                  title="go to top"
-                  text="MP"
-                  link="/"
-                  fn={(e) => setOpen(false)}
-                  hoverBgColor="hover:bg-violet"
-                  hoverShadowColor="hover:shadow-link-violet"
-                  darkHoverTextColor="dark:hover:text-dark-color"
-                  cursor="cursor-pointer"
-                />
-              </li>
-              <li className=" bg-light-color dark:bg-dark-color">
-                <Tile
-                  ariaLabel="go to projects page"
-                  title="Projects"
-                  text="Projects"
-                  link="/projects"
-                  fn={(e) => setOpen(false)}
-                  hoverBgColor="hover:bg-violet"
-                  hoverShadowColor="hover:shadow-link-violet"
-                  darkHoverTextColor="dark:hover:text-dark-color"
-                  cursor="cursor-pointer"
-                />
-              </li>
-              <li className=" bg-light-color dark:bg-dark-color">
-                <Tile
-                  ariaLabel="go to blog page"
-                  title="blog"
-                  text="blog"
-                  link="/blog"
-                  fn={(e) => setOpen(false)}
-                  hoverBgColor="hover:bg-violet"
-                  hoverShadowColor="hover:shadow-link-violet"
-                  darkHoverTextColor="dark:hover:text-dark-color"
-                  cursor="cursor-pointer"
-                />
-              </li>
+
               <li className=" bg-light-color dark:bg-dark-color">
                 <Tile
                   ariaLabel="go to snippets page"

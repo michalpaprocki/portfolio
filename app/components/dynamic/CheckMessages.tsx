@@ -29,13 +29,13 @@ const CheckMessages = () => {
         }
       }
     } catch (error) {
-      console.log();
+      console.log(error);
     }
   };
   return (
     <>
-      <div className="p-4 w-fit flex flex-col gap-2 ">
-        <div className="flex justify-between w-[40ch] p-2">
+      <div className="flex w-fit flex-col gap-2 p-4 ">
+        <div className="flex w-[40ch] justify-between p-2">
           <label className="font-bold">User :</label>
           <input
             className="text-dark-color outline-none ring-2 ring-violet-dark-a40"
@@ -44,7 +44,7 @@ const CheckMessages = () => {
             onChange={(e) => setName(e.currentTarget.value)}
           />
         </div>
-        <div className="flex justify-between w-[40ch] p-2">
+        <div className="flex w-[40ch] justify-between p-2">
           <label className="font-bold">Password :</label>
           <input
             className="text-dark-color outline-none ring-2 ring-violet-dark-a40"
@@ -55,7 +55,7 @@ const CheckMessages = () => {
         </div>
         <button
           onClick={() => handleClick()}
-          className="p-2 bg-violet dark:bg-violet text-light-color font-semibold hover:bg-dark-color hover:dark:bg-light-color hover:text-light-color hover:dark:text-dark-color transition-all"
+          className="bg-violet p-2 font-semibold text-light-color transition-all hover:bg-dark-color hover:text-light-color dark:bg-violet hover:dark:bg-light-color hover:dark:text-dark-color"
         >
           Check
         </button>
@@ -64,7 +64,7 @@ const CheckMessages = () => {
         <div
           className={`${
             notify.error ? "bg-red-500" : ""
-          }  w-fit p-4 self-center`}
+          }  w-fit self-center p-4`}
         >
           <span className={``}>{notify.message}</span>
         </div>
@@ -81,9 +81,9 @@ const CheckMessages = () => {
                 email: string;
                 createdAt: string;
               },
-              i
+              i,
             ) => (
-              <div key={i} className="bg-slate-700 p-2 flex flex-col gap-2">
+              <div key={i} className="flex flex-col gap-2 bg-slate-700 p-2">
                 <div className="flex gap-2">
                   <span>{m.name}</span>
                   <span>{m.email}</span>
@@ -91,9 +91,9 @@ const CheckMessages = () => {
                     {m.createdAt.slice(0, -5).replaceAll("T", " ")}&nbsp; GMT
                   </span>
                 </div>
-                <span className="indent-2 p-2">{m.message}</span>
+                <span className="p-2 indent-2">{m.message}</span>
               </div>
-            )
+            ),
           )}
         </div>
       )}
