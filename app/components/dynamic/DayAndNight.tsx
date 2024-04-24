@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MdLightMode, MdDarkMode, MdContrast } from "react-icons/md";
 enum IconType {
   os = "os",
@@ -10,7 +10,7 @@ enum IconType {
 const DayAndNight = () => {
   const [icon, setIcon] = useState<IconType>();
   const [show, setShow] = useState(false);
-
+  const refEl = useRef<HTMLDivElement>(null);
   const setTheme = () => {
     if (
       localStorage.theme === "dark" ||
@@ -22,13 +22,29 @@ const DayAndNight = () => {
     }
   };
 
+  const MenuClickAway = (e: MouseEvent) => {
+    if (!e.target) return;
+    //@ts-ignore
+    if (show && !refEl.current?.contains(e.target)) {
+      setShow(false);
+    }
+  };
   useEffect(() => {
     setTheme();
     if (localStorage.theme) setIcon(localStorage.theme);
     else setIcon(IconType.os);
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("click", (e) => {
+      MenuClickAway(e);
+    });
+    return () => {
+      window.removeEventListener("click", () => {});
+    };
+  }, [show]);
   return (
-    <div className="">
+    <div ref={refEl} className="">
       <button
         aria-label="select theme"
         onClick={() => setShow(!show)}
