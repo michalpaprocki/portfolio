@@ -12,8 +12,12 @@ import {
 
 const ProjectsShowcase = () => {
   return (
-    <section id="projects" className="flex justify-center pb-8 ">
-      <div className="md:p-16 p-8 mt-16 grid md:gap-8 gap-4 xl:grid-cols-2 grid-cols-1 items-center md:w-[80%] w-full">
+    <section
+      id="projects"
+      className="flex flex-col items-center justify-center pb-8 "
+    >
+      <h2 className="text-2xl font-bold">Projects</h2>
+      <div className="mt-16 grid w-full grid-cols-1 items-center gap-4 p-8 md:w-[80%] md:gap-8 md:p-16 xl:grid-cols-2">
         <GridItem
           description="Create an account and post events or market sell orders. Like and comment on posted items."
           title="Eventzor"
