@@ -6,7 +6,7 @@ import Link from "next/link";
 const page = () => {
   return (
     <div className="flex flex-col gap-2 py-8">
-      <h1 className="mx-auto py-3 text-xl">Ecto's Schemaless Changeset</h1>
+      <h1 className="mx-auto py-3 text-xl">Ecto&apos;s Schemaless Changeset</h1>
       <div className="flex flex-col pb-10">
         <p className="mt-4 w-80p self-center indent-1">
           <Link
@@ -21,13 +21,13 @@ const page = () => {
           the work with changesets is done using schemas, nonetheless there are
           cases where we would want to validate a set of data without using one,
           e.g.: form validation. Although Ecto documentation describes how to
-          implement a schemaless changeset, it doesn't explain how to use it
-          with Liveview.
+          implement a schemaless changeset, it doesn&apos;t explain how to use
+          it with Liveview.
         </p>
         <p className="mb-8 mt-4 w-80p self-center indent-1">
-          To start off we'll need a data source. In our app's{" "}
+          To start off we&apos;ll need a data source. In our app&apos;s{" "}
           <Code text="lib/app_web/live" />
-          &nbsp; directory create our liveview file, let's call it{" "}
+          &nbsp; directory create our liveview file, let&apos;s call it{" "}
           <Code text="nickname_live.ex" />, and implement mount and render
           callbacks of the liveview behaviour:
         </p>
@@ -55,13 +55,13 @@ const page = () => {
         `}
         />
         <p className="mb-8 mt-4 w-80p self-center indent-1">
-          So what's going on here? In <Code text="mount" /> we add{" "}
+          So what&apos;s going on here? In <Code text="mount" /> we add{" "}
           <Code text="form" />
-          (it has to be the same as form's id in html) variable to the socket,
-          it will hold whatever data we send from our form.&nbsp;
+          (it has to be the same as form&apos;s id in html) variable to the
+          socket, it will hold whatever data we send from our form.&nbsp;
           <Code text="to_form" /> function transforms a map or Ecto changeset to
           a form component. The render function is responsible for generating
-          our html.heex template. Let's now implement some logic:
+          our html.heex template. Let&apos;s now implement some logic:
         </p>
 
         <Snippet
@@ -94,8 +94,8 @@ const page = () => {
         </pre>
         <p className="mt-4 w-80p self-center indent-1">
           As it turns out, <Code text="to_form" /> function computes a name to
-          nest the params based on schema name that is being used. As we don't
-          use a schema we'll have to pass&nbsp;
+          nest the params based on schema name that is being used. As we
+          don&apos;t use a schema we&apos;ll have to pass&nbsp;
           <Code text="as:" /> parameter that will serve as aforementioned name.
           It basically creates a map that we can pattern match against. Our{" "}
           <Code text="mount" /> and <Code text="handle_event" /> functions will
@@ -125,8 +125,8 @@ const page = () => {
         `}
         />
         <p className="mt-4 w-80p self-center indent-1">
-          Et voilà, now the compiler doens't complain anymore, and we can see
-          errors when typing in the <Code text="Nickname" /> field.
+          Et voilà, now the compiler doens&apos;t complain anymore, and we can
+          see errors when typing in the <Code text="Nickname" /> field.
         </p>
       </div>
     </div>
