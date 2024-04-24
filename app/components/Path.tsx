@@ -19,7 +19,7 @@ const Path = () => {
           <span className="px-1" key={i}>
             /
           </span>
-          <Link className="hover:text-violet" href={links[i]}>
+          <Link className="transition hover:text-violet" href={links[i]}>
             {p}
           </Link>
         </div>

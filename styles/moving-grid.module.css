@@ -6,9 +6,12 @@
     linear-gradient(180deg, blue 1%, transparent 5%),
     linear-gradient(0deg, blue 1%, transparent 5%);
     background-attachment: fixed;
-    background-size: 2rem 2rem;
+    background-size: 3rem 3rem;
     animation: gridMove linear 150s infinite;
     border: 2px solid blue;
+    transition: all;     
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;;
 }
 
 @keyframes gridMove {
@@ -27,7 +30,7 @@
 }
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 750px){
     .grid {
         width: 50%
     }

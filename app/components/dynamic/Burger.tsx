@@ -24,7 +24,7 @@ const Burger = () => {
   return (
     <>
       <ul className="hidden md:flex">
-        <li className="p-1 md:h-auto">
+        {/* <li className="p-1 md:h-auto">
           <Tile
             ariaLabel="got to projects"
             title="Projects"
@@ -43,7 +43,7 @@ const Burger = () => {
             darkHoverTextColor="dark:hover:text-dark-color"
             cursor="cursor-pointer"
           />
-        </li>
+        </li> */}
         <li className="p-1 md:h-auto">
           <Tile
             ariaLabel="go to snippets page"
@@ -54,9 +54,7 @@ const Burger = () => {
             cursor="cursor-pointer"
           />
         </li>
-      </ul>
-      <ul className="hidden md:block">
-        <li className="p-1">
+        <li className="hidden p-1 md:block">
           <DayAndNight />
         </li>
       </ul>
@@ -108,7 +106,7 @@ const Burger = () => {
                   cursor="cursor-pointer"
                 />
               </li>
-              <li className=" bg-light-color dark:bg-dark-color">
+              {/* <li className=" bg-light-color dark:bg-dark-color">
                 <Tile
                   ariaLabel="go to projects page"
                   title="Projects"
@@ -133,7 +131,7 @@ const Burger = () => {
                   darkHoverTextColor="dark:hover:text-dark-color"
                   cursor="cursor-pointer"
                 />
-              </li>
+              </li> */}
               <li className=" bg-light-color dark:bg-dark-color">
                 <Tile
                   ariaLabel="go to snippets page"

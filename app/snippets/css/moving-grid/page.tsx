@@ -2,6 +2,7 @@ import Snippet from "@/app/components/Snippet";
 import fs from "fs";
 import styles from "@/styles/moving-grid.module.css";
 import Tabs from "@/app/components/Tabs";
+import Code from "@/app/components/static/Code";
 
 const page = () => {
   const documentStyles = fs.readFileSync(
@@ -10,19 +11,22 @@ const page = () => {
   );
   return (
     <div className="flex flex-col gap-2 py-8">
-      <h2 className="mx-auto py-3 text-xl">Moving Grid</h2>
+      <h1 className="mx-auto py-3 text-xl">Moving Grid</h1>
       <div className="flex flex-col items-center pb-10">
         <p className="w-80p">
           Simple animation that moves a grid across the screen. You can modify
           the direction of movement by tinkering with{" "}
-          <code>background-position</code> in <code>@keyframes</code>, add some
-          blur with <code>filter: blur(4px)</code> for more style or even add
-          another grid with pseudo elements <code>::before</code> or{" "}
-          <code>::after</code> and reverse .
+          <Code text="background-position" /> in <Code text="@keyframes" />, add
+          some blur with <Code text="filter: blur(4px)" /> for more style or
+          even add another grid with pseudo elements <Code text="::before" /> or{" "}
+          <Code text="::after" /> and reverse the keyframes.
         </p>
       </div>
       <div className="flex justify-center py-20">
-        <div className={styles.grid}></div>
+        <div className="flex w-full flex-col items-center justify-center">
+          <div className={styles.grid}></div>
+          <div className="group relative mb-16 mt-32 flex h-[20rem] w-[80%] animate-gridMove justify-center bg-dark-color bg-gradient-grid bg-3x3 bg-fixed text-light-color shadow-inner transition-all delay-75 dark:animate-gridMoveDark dark:bg-light-a80 dark:bg-gradient-grid-dark dark:text-dark-color dark:shadow-link-dark-fat md:w-[50%]"></div>
+        </div>
       </div>
       <Tabs
         tabs={[
@@ -78,7 +82,7 @@ theme: {
                   language="tailwind.config.js"
                 />
                 <Snippet
-                  code={`<div class="w-[50%] md:w-[80%] h-80 bg-gradient-grid bg-3x3 animate-gridMove"></div>`}
+                  code={`<div class="w-[50%] md:w-[80%] h-80 bg-gradient-grid bg-3x3 animate-gridMove bg-fixed border-2 border-blue-800 border-solid"></div>`}
                   language="TailwindCSS"
                 />
               </>

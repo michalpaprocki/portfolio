@@ -8,14 +8,14 @@ const page = () => {
 
   return (
     <div className="flex flex-col gap-2 py-8">
-      <h2 className="mx-auto py-3 text-xl">Spinners</h2>
+      <h1 className="mx-auto py-3 text-xl">Spinners</h1>
       <div className="flex flex-col items-center pb-10">
         <p className="w-80p">Animated spinners for loading states.</p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div>
           <div className="flex flex-col items-center justify-center py-20">
-            <h3 className="pb-10">Spinner #1</h3>
+            <h2 className="pb-10">Spinner #1</h2>
 
             <div className="h-16 w-16 animate-spin rounded-full border-4 border-[black_transparent_black_transparent] dark:border-[white_transparent_white_transparent]"></div>
           </div>
@@ -50,16 +50,16 @@ const page = () => {
         </div>
         <div>
           <div className="flex flex-col items-center justify-center py-20">
-            <h3 className="pb-10">Spinner #2</h3>
+            <h2 className="pb-10">Spinner #2</h2>
             <div className={`flex h-16 w-8 justify-between`}>
               <div
-                className={`animate-pendulumTop h-16 w-2 bg-black dark:bg-white`}
+                className={`h-16 w-2 animate-pendulumTop bg-black dark:bg-white`}
               ></div>
               <div
-                className={`animate-pendulumCenter h-16 w-2 bg-black dark:bg-white`}
+                className={`h-16 w-2 animate-pendulumCenter bg-black dark:bg-white`}
               ></div>
               <div
-                className={`animate-pendulumBottom h-16 w-2 bg-black dark:bg-white`}
+                className={`h-16 w-2 animate-pendulumBottom bg-black dark:bg-white`}
               ></div>
             </div>
           </div>

@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex min-h-reduced flex-col">
-      <div className="pt-20">
+    <section className="flex min-h-reduced flex-col leading-6">
+      <div className="mb-10 pt-20">
         <Path />
       </div>
       {children}
