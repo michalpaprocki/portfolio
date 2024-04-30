@@ -23,9 +23,12 @@ const DayAndNight = () => {
   };
 
   const MenuClickAway = (e: MouseEvent) => {
-    if (!e.target) return;
-    //@ts-ignore
-    if (show && !refEl.current?.contains(e.target)) {
+    if (!show || !e.target) return;
+    if (
+      show &&
+      e.target instanceof Node &&
+      !refEl.current?.contains(e.target)
+    ) {
       setShow(false);
     }
   };
@@ -40,7 +43,9 @@ const DayAndNight = () => {
       MenuClickAway(e);
     });
     return () => {
-      window.removeEventListener("click", () => {});
+      window.removeEventListener("click", (e) => {
+        MenuClickAway(e);
+      });
     };
   }, [show]);
   return (
