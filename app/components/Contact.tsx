@@ -219,9 +219,9 @@ const Contact = () => {
               </span>
             </Link>
           </div>
-          <div className="flex p-4 mt-8 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
+          {/* <div className="flex p-4 mt-8 gap-4 bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset justify-center items-center">
             <ResumeDL />
-          </div>
+          </div> */}
         </div>
         <div
           onClick={(e) => {}}
