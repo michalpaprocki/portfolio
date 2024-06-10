@@ -204,7 +204,7 @@ const Contact = () => {
           <div className="group bg-black rounded-md text-light-color shadow-md shadow-dark-color dark:ring-violet-a40 dark:ring-2 dark:ring-inset transition">
             <Link
               aria-label="go to github profile"
-              href="https://github.com/str4ng3love"
+              href="https://github.com/michalpaprocki"
               target="_blank"
               className="flex justify-center flex-col items-center p-4"
             >
@@ -215,7 +215,7 @@ const Contact = () => {
                 DarkHoverAfterTextColor="dark:hover:after:text-light-color"
               />
               <span className="group-hover:text-violet transition">
-                https://github.com/str4ng3love
+                https://github.com/michalpaprocki
               </span>
             </Link>
           </div>

@@ -8,6 +8,8 @@ import {
   SiTypescript,
   SiReact,
   SiNextdotjs,
+  SiElixir,
+  SiPhoenixframework,
 } from "react-icons/si";
 
 const ProjectsShowcase = () => {
@@ -18,12 +20,27 @@ const ProjectsShowcase = () => {
     >
       <h2 className="text-2xl font-bold">Projects</h2>
       <div className="mt-16 grid w-full grid-cols-1 items-center gap-4 p-8 md:w-[80%] md:gap-8 md:p-16 xl:grid-cols-2">
+      <GridItem
+          description="Battleships game for 2 players, with chat."
+          title="Warships WIP"
+          image="warships_ex.png"
+          linkApp="https://warships-app.gigalixirapp.com"
+          linkCode="https://github.com/michalpaprocki/warships"
+          icons={[
+            { icon: SiElixir, title: "Elixir" },
+            { icon: SiPhoenixframework, title: "Phoenix" },
+            {
+              icon: SiTailwindcss,
+              title: "Tailwind CSS",
+            },
+          ]}
+        />
         <GridItem
           description="Create an account and post events or market sell orders. Like and comment on posted items."
           title="Eventzor"
           image="eventzor.png"
           linkApp="https://eventzor.vercel.app"
-          linkCode="https://github.com/str4ng3love/Eventzor"
+          linkCode="https://github.com/michalpaprocki/Eventzor"
           icons={[
             { icon: SiNextdotjs, title: "Next.JS" },
             { icon: SiTypescript, title: "Typescript" },
@@ -42,7 +59,7 @@ const ProjectsShowcase = () => {
           title="Memory Game"
           image="memory.png"
           linkApp="https://match-game-olive.vercel.app"
-          linkCode="https://github.com/str4ng3love/match-game"
+          linkCode="https://github.com/michalpaprocki/match-game"
           icons={[
             { icon: SiReact, title: "React" },
             { icon: SiTypescript, title: "Typescript" },
@@ -57,7 +74,7 @@ const ProjectsShowcase = () => {
           title="Speed Typing Game"
           image="type_game.png"
           linkApp="https://typing-checker-wine.vercel.app"
-          linkCode="https://github.com/str4ng3love/typing_checker"
+          linkCode="https://github.com/michalpaprocki/typing_checker"
           icons={[
             { icon: SiReact, title: "React" },
             { icon: SiTypescript, title: "Typescript" },
@@ -72,7 +89,7 @@ const ProjectsShowcase = () => {
           title="Blogging Site"
           image="blogga.png"
           linkApp="https://blogga-v17g.onrender.com"
-          linkCode="https://github.com/str4ng3love/blogga"
+          linkCode="https://github.com/michalpaprocki/blogga"
           icons={[
             { icon: SiExpress, title: "Express" },
             { icon: SiJavascript, title: "Javascript" },
@@ -87,7 +104,7 @@ const ProjectsShowcase = () => {
           title="Minesweeper Game"
           image="minesweeper.png"
           linkApp="https://minesweeper-neon-rho.vercel.app"
-          linkCode="https://github.com/str4ng3love/minesweeper"
+          linkCode="https://github.com/michalpaprocki/minesweeper"
           icons={[
             { icon: SiReact, title: "React" },
             { icon: SiTypescript, title: "Typescript" },
