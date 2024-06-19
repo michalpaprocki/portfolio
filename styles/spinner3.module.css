@@ -1,0 +1,53 @@
+.spinner {
+    height: 6rem;
+    width: 6rem;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.dot_odd {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: white;
+    animation: up_and_down 2s  ease infinite;
+}
+.dot_even {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: white;
+    animation: down_and_up 2s ease infinite;
+}
+
+
+
+@keyframes up_and_down {
+    0% , 100% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    75% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes down_and_up {
+    0% , 100% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    75% {
+        transform: translateY(100%);
+    }
+}

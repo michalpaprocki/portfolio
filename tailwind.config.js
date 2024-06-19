@@ -345,6 +345,34 @@ module.exports = {
             transform: "translateY(-50%)",
           },
         },
+        up_and_down :{
+          "0% , 100%": {
+              transform: "translateY(0%) scale(120%)",
+            },
+          "25%": {
+              transform: "translateY(100%) scale(100%)"
+          },
+          "50%": {
+              transform: "translateY(0%) scale(120%)",
+          },
+          "75%": {
+              transform: "translateY(-100%) scale(100%)",
+          },
+        },
+        down_and_up: {
+          "0% , 100%": {
+              transform: "translateY(0%) scale(120%)",
+            },
+          "25%": {
+              transform: "translateY(-100%) scale(100%)",
+          },
+          "50%": {
+              transform:" translateY(0%) scale(120%)",
+          },
+          "75%": {
+              transform: "translateY(100%) scale(100%)",
+          },
+        },
       },
       animation: {
         slide: "slide 1s cubic-bezier(.98,.12,.12,.98) infinite",
@@ -381,6 +409,8 @@ module.exports = {
           "pendulumFromCenter 1.5s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite",
         pendulumBottom:
           "pendulumFromBottom 1s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite",
+        up_and_down: "up_and_down 2s ease infinite",
+        down_and_up: "down_and_up 2s ease infinite"
       },
       minHeight: {
         reduced: ["calc(100vh - 10rem)", "calc(100dvh - 10rem)"],

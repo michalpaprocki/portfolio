@@ -10,18 +10,18 @@
     height: 4rem;
     animation: pendulumFromTop 1s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite ;
   }
-  .center {
-    background-color: white;
-    width: 0.5rem;
-    height: 4rem;
-    animation: pendulumFromCenter 1.5s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite ;
-  }
-  .right {
-    background-color: white;
-    width: 0.5rem;
-    height: 4rem;
-    animation: pendulumFromBottom 1s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite ;
-  }
+.center {
+background-color: white;
+width: 0.5rem;
+height: 4rem;
+animation: pendulumFromCenter 1.5s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite ;
+}
+.right {
+background-color: white;
+width: 0.5rem;
+height: 4rem;
+animation: pendulumFromBottom 1s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite ;
+}
 @keyframes pendulumFromTop {
    0%, 100% {
         transform: translateY(-50%);
