@@ -25,8 +25,9 @@ const page = () => {
               {
                 element: (
                   <>
-                    <Snippet code={documentStyle1} language="CSS" />
-                    <Snippet
+                    <Snippet header="css" code={documentStyle1} language="CSS" />
+                    <Snippet 
+                    header="html"
                       code={`<div class="spinner"></div>`}
                       language="HTML"
                     />
@@ -39,7 +40,8 @@ const page = () => {
                 element: (
                   <>
                     <Snippet
-                      language="TailwindCSS"
+                    header="TailwindCSS"
+                      language="js"
                       code={`<div class="h-16 w-16 animate-spin rounded-full border-4 border-[white_transparent_white_transparent]"></div>`}
                     />
                   </>
@@ -69,8 +71,9 @@ const page = () => {
               {
                 element: (
                   <>
-                    <Snippet code={documentStyle2} language="CSS" />
+                    <Snippet header="css" code={documentStyle2} language="CSS" />
                     <Snippet
+                    header="html"
                       code={`<div class="spinner">\n <div class="left"></div>\n <div class="center"></div>\n <div class="right"></div>\n</div>
                     `}
                       language="HTML"
@@ -84,7 +87,8 @@ const page = () => {
                 element: (
                   <>
                     <Snippet
-                      language="tailwind.config.js"
+                    header="tailwind.config.js"
+                      language="js"
                       code={`
  theme: {
     extend: {
@@ -126,7 +130,8 @@ const page = () => {
     }`}
                     />
                     <Snippet
-                      language="TailwindCSS"
+                    header="TailwindCSS"
+                      language="js"
                       code={`<div class="flex h-16 w-8 justify-between">\n <div class="animate-pendulumTop h-16 w-2 bg-black dark:bg-white"></div>\n <div class="animate-pendulumCenter h-16 w-2 bg-black dark:bg-white"></div>\n <div class="animate-pendulumBottom h-16 w-2 bg-black dark:bg-white"></div>\n</div>`}
                     />
                   </>
@@ -150,8 +155,9 @@ const page = () => {
               {
                 element: (
                   <>
-                    <Snippet code={documentStyle3} language="CSS" />
+                    <Snippet header="css" code={documentStyle3} language="CSS" />
                     <Snippet
+                    header="html"
                       code={`
             <div className="spinner>
               <div className="dot_odd"></div>
@@ -170,7 +176,8 @@ const page = () => {
                 element: (
                   <>
                     <Snippet
-                      language="tailwind.config.js"
+                    header="tailwind.config.js"
+                      language="js"
                       code={`
         up_and_down :{
           "0% , 100%": {
@@ -203,7 +210,8 @@ const page = () => {
                         `}
                     />
                     <Snippet
-                      language="TailwindCSS"
+                    header="tailwind.config.js"
+                      language="js"
                       code={`
             <div className="h-24 w-24 flex justify-evenly items-center">
               <div className="h-4 w-4 bg-white rounded-full animate-up_and_down"></div>

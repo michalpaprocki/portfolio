@@ -31,6 +31,7 @@ module.exports = {
         "tri-offset": "0 0, 1.5rem -0.5rem",
       },
       colors: {
+        "github_bg": "#0d1117",
         "dark-color": "var(--dark)",
         "dark-a80": "var(--dark-a80)",
         "dark-a40": "var(--dark-a80)",

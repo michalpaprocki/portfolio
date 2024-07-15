@@ -33,8 +33,8 @@ const page = () => {
           {
             element: (
               <>
-                <Snippet code={documentStyles} language="css" />
-                <Snippet code={`<div class="grid"></div>`} language="html" />
+                <Snippet header="css" code={documentStyles} language="css" />
+                <Snippet header="html" code={`<div class="grid"></div>`} language="html" />
               </>
             ),
             tabTitle: "CSS",
@@ -43,6 +43,7 @@ const page = () => {
             element: (
               <>
                 <Snippet
+                header="tailwind.config.js"
                   code={`
 theme: {
     extend: {
@@ -79,11 +80,12 @@ theme: {
     }
 }
     `}
-                  language="tailwind.config.js"
+                  language="js"
                 />
                 <Snippet
+                  header="TailwindCSS"
                   code={`<div class="w-[50%] md:w-[80%] h-80 bg-gradient-grid bg-3x3 animate-gridMove bg-fixed border-2 border-blue-800 border-solid"></div>`}
-                  language="TailwindCSS"
+                  language="js"
                 />
               </>
             ),

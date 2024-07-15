@@ -34,7 +34,7 @@ const page = () => {
         <p className="mt-4 w-80p self-center indent-1">
           Here&apos;s the implementation in React:
         </p>
-        <Snippet language="React | Typescript" code={dropdownComponent} />
+        <Snippet header="React | Typescript" language="typescript" code={dropdownComponent} />
         <p className="mb-10 mt-4 w-80p self-center indent-1 ">
           And here&apos;s working component:
         </p>

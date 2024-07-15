@@ -1,6 +1,5 @@
 import Snippet from "@/app/components/Snippet";
 import Code from "@/app/components/static/Code";
-
 import Link from "next/link";
 
 const page = () => {
@@ -32,6 +31,7 @@ const page = () => {
           callbacks of the liveview behaviour:
         </p>
         <Snippet
+          header="elixir"
           language="elixir"
           code={`
         defmodule AppWeb.NicknameLive do  
@@ -65,6 +65,7 @@ const page = () => {
         </p>
 
         <Snippet
+          header="elixir"
           language="elixir"
           code={`
         def handle_event("validate", params, socket) do
@@ -102,6 +103,7 @@ const page = () => {
           now look like this:
         </p>
         <Snippet
+          header="elixir"
           language="elixir"
           code={`
           def mount(_params, _session, socket) do
@@ -125,7 +127,7 @@ const page = () => {
         `}
         />
         <p className="mt-4 w-80p self-center indent-1">
-          Et voilà, now the compiler doens&apos;t complain anymore, and we can
+          Et voilà, now the compiler doesn&apos;t complain anymore, and we can
           see errors when typing in the <Code text="Nickname" /> field.
         </p>
       </div>
