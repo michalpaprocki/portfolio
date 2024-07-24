@@ -159,10 +159,10 @@ const page = () => {
                     <Snippet
                     header="html"
                       code={`
-            <div className="spinner>
-              <div className="dot_odd"></div>
-              <div className="dot_even"></div>
-              <div className="dot_odd"></div>
+            <div class="spinner">
+              <div class="dot_odd"></div>
+              <div class="dot_even"></div>
+              <div class="dot_odd"></div>
             </div>
                     `}
                       language="HTML"
