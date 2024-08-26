@@ -2,7 +2,6 @@ import "./globals.css";
 import { Metadata } from "next";
 import Header from "./components/Header";
 import Footer from "./components/static/Footer";
-
 export const metadata: Metadata = {
   title: "Michał Paprocki",
   keywords: ["nextjs", "react", "web development", "blog"],
@@ -15,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
+        <head>
+          <script src="/scripts/theme.js" />
+        </head>
         <body className="bg-light-color text-dark-color dark:bg-dark-color dark:text-light-color">
           <Header />
           {children}

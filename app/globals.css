@@ -13,7 +13,6 @@
   --violet-dark: hsl(271, 100%, 25%);
   --violet-dark-a40: hsla(271, 100%, 25%, 0.4);
   --violet-dark-a80: hsla(271, 100%, 25%, 0.8);
-  
 }
 html {
   scroll-behavior: smooth;
@@ -26,8 +25,8 @@ body {
   margin: 0rem;
   text-decoration: none;
   list-style: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode",
-    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-weight: 400;
 }
 nav {
@@ -53,5 +52,5 @@ nav {
   bottom: 8rem;
 }
 h2#hero-heading:nth-child(10) {
-  color:aqua !important;
+  color: aqua !important;
 }

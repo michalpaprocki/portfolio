@@ -31,7 +31,7 @@ module.exports = {
         "tri-offset": "0 0, 1.5rem -0.5rem",
       },
       colors: {
-        "github_bg": "#0d1117",
+        github_bg: "#0d1117",
         "dark-color": "var(--dark)",
         "dark-a80": "var(--dark-a80)",
         "dark-a40": "var(--dark-a80)",
@@ -346,32 +346,32 @@ module.exports = {
             transform: "translateY(-50%)",
           },
         },
-        up_and_down :{
+        up_and_down: {
           "0% , 100%": {
-              transform: "translateY(0%) scale(120%)",
-            },
+            transform: "translateY(0%) scale(120%)",
+          },
           "25%": {
-              transform: "translateY(100%) scale(100%)"
+            transform: "translateY(100%) scale(100%)",
           },
           "50%": {
-              transform: "translateY(0%) scale(120%)",
+            transform: "translateY(0%) scale(120%)",
           },
           "75%": {
-              transform: "translateY(-100%) scale(100%)",
+            transform: "translateY(-100%) scale(100%)",
           },
         },
         down_and_up: {
           "0% , 100%": {
-              transform: "translateY(0%) scale(120%)",
-            },
+            transform: "translateY(0%) scale(120%)",
+          },
           "25%": {
-              transform: "translateY(-100%) scale(100%)",
+            transform: "translateY(-100%) scale(100%)",
           },
           "50%": {
-              transform:" translateY(0%) scale(120%)",
+            transform: " translateY(0%) scale(120%)",
           },
           "75%": {
-              transform: "translateY(100%) scale(100%)",
+            transform: "translateY(100%) scale(100%)",
           },
         },
       },
@@ -411,7 +411,7 @@ module.exports = {
         pendulumBottom:
           "pendulumFromBottom 1s cubic-bezier(0.2, 1.5, 0.2, 0.4) infinite",
         up_and_down: "up_and_down 2s ease infinite",
-        down_and_up: "down_and_up 2s ease infinite"
+        down_and_up: "down_and_up 2s ease infinite",
       },
       minHeight: {
         reduced: ["calc(100vh - 10rem)", "calc(100dvh - 10rem)"],
@@ -427,5 +427,5 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/typography")],
-  darkMode: "class",
+  darkMode: "selector",
 };

@@ -11,6 +11,12 @@ const page = () => {
             href="/snippets/js/js-clickaway"
           />
         </li>
+        <li>
+          <LinkSimple
+            text="Theme switcher"
+            href="/snippets/js/theme-switcher"
+          />
+        </li>
       </ul>
     </div>
   );
