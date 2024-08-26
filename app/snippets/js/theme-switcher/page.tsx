@@ -65,7 +65,6 @@ const page = () => {
           header="theme.js"
           language="javascript"
         />
-
         <p className="my-8 w-80p self-center indent-1">
           Next, we want to run the script before any content (
           <Link
@@ -101,7 +100,7 @@ const page = () => {
                   </html>
               `}
           header="index.html"
-          language=""
+          language="html"
         />
 
         <h2 className="mx-auto py-8 text-lg capitalize">
@@ -115,7 +114,6 @@ const page = () => {
           attention to cosmetics, let&apos;s animate the menu by alternating
           it&apos;s height and implement a simple click away function.
         </p>
-
         <Snippet
           header="index.html"
           code={`
