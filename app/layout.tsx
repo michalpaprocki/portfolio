@@ -16,7 +16,7 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head>
-          <script src="/scripts/theme.js" />
+          <script src="/scripts/theme.js" async />
         </head>
         <body className="bg-light-color text-dark-color dark:bg-dark-color dark:text-light-color">
           <Header />

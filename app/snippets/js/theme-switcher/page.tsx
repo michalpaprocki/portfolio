@@ -15,7 +15,7 @@ const page = () => {
           <Code text={'window.matchMedia("(prefers-color-scheme: dark)'} />
           &nbsp;property and add a global css class to the html tag. Later, we
           will build a component that will allow the user to save the choosen
-          theme in browser's&nbsp;
+          theme in browser&apos;s&nbsp;
           <Link
             className="underline underline-offset-4 transition hover:cursor-pointer hover:text-violet"
             href={`https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API`}
@@ -31,7 +31,7 @@ const page = () => {
         </h2>
         <p className="my-8 w-80p self-center indent-1">
           Our first course of action is to find out whether the user prefers
-          dark mode and set the styles accordingly, i'm using Tailwind here
+          dark mode and set the styles accordingly, i&apos;m using Tailwind here
           with&nbsp;
           <Link
             className="underline underline-offset-4 transition hover:cursor-pointer hover:text-violet"
@@ -85,7 +85,7 @@ const page = () => {
           >
             FOUC
           </Link>
-          . Additionally, we're including <Code text="themeSwitcher.js" />,
+          . Additionally, we&apos;re including <Code text="themeSwitcher.js" />,
           which will be implement next :
         </p>
 
@@ -108,12 +108,12 @@ const page = () => {
           Building interface and logic
         </h2>
         <p className="my-8 w-80p self-center indent-1">
-          Now that we have it running, we can start implementing switcher's
-          functionality. We'll build a dropdown menu, that will allow the user
-          to choose and apply their desired theme and save it in browser's local
-          storage. With logic in place, we can now turn our attention to
-          cosmetics, let's animate the menu by alternating it's height and
-          implement a simple click away function.
+          Now that we have it running, we can start implementing switcher&apos;s
+          functionality. We&apos;ll build a dropdown menu, that will allow the
+          user to choose and apply their desired theme and save it in
+          browser&apos;s local storage. With logic in place, we can now turn our
+          attention to cosmetics, let&apos;s animate the menu by alternating
+          it&apos;s height and implement a simple click away function.
         </p>
 
         <Snippet
